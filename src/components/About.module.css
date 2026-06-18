@@ -1,0 +1,244 @@
+.about {
+  background-color: transparent;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.bioCard {
+  padding: 40px;
+  position: relative;
+  overflow: hidden;
+}
+
+@media (max-width: 576px) {
+  .bioCard {
+    padding: 24px;
+  }
+}
+
+.cardHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.quoteIcon {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  color: var(--primary);
+  line-height: 0.5;
+  margin-top: 10px;
+}
+
+.cardHeader h3 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 5px;
+}
+
+.bioText {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 30px;
+}
+
+.languages {
+  border-top: 1px solid var(--border);
+  padding-top: 24px;
+}
+
+.smallTitle {
+  font-size: 0.95rem;
+  color: var(--text-light);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.langList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.langBadge {
+  padding: 6px 14px;
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+/* Tab details card styling */
+.detailsCard {
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.tabs {
+  display: flex;
+  border-bottom: 1px solid var(--border);
+  background-color: var(--bg-primary);
+}
+
+.tabBtn {
+  flex: 1;
+  padding: 20px;
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  outline: none;
+}
+
+.tabBtn:hover {
+  color: var(--primary);
+  background-color: rgba(13, 148, 136, 0.02);
+}
+
+.tabBtnActive {
+  color: var(--primary);
+  background-color: var(--bg-secondary);
+  border-bottom: 3px solid var(--primary);
+  margin-bottom: -1px;
+}
+
+.tabContent {
+  padding: 40px;
+  min-height: 380px;
+}
+
+@media (max-width: 576px) {
+  .tabContent {
+    padding: 24px 16px;
+    min-height: auto;
+  }
+}
+
+/* Education list details */
+.educationList {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+
+.educationItem {
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.educationItem:not(:last-child)::after {
+  content: '';
+  position: absolute;
+  top: 24px;
+  left: 6px;
+  bottom: -24px;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.eduDot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 3px solid var(--primary-light);
+  margin-top: 5px;
+  z-index: 2;
+  box-shadow: 0 0 0 2px rgba(13, 148, 136, 0.15);
+}
+
+.eduInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.eduYear {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  width: max-content;
+  margin-bottom: 6px;
+}
+
+.eduDegree {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.eduInst {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Core Competencies skills styling */
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 480px) {
+  .skillsGrid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}
+
+.skillCard {
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.skillCheck {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: var(--primary-light);
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.85rem;
+}
+
+.skillName {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}

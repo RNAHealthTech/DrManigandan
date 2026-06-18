@@ -1,0 +1,157 @@
+.footer {
+  background-color: var(--text-main);
+  color: #94a3b8;
+  padding: 80px 0 40px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+@media (max-width: 768px) {
+  .footer {
+    padding: 60px 0 30px 0;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1fr;
+  gap: 60px;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.logoSymbol {
+  color: var(--primary);
+  font-size: 1.5rem;
+}
+
+.logoText {
+  color: var(--text-white);
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.description {
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text-white);
+}
+
+.links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.links a {
+  font-size: 0.95rem;
+  color: #94a3b8;
+}
+
+.links a:hover {
+  color: var(--primary);
+  padding-left: 4px;
+}
+
+.address {
+  font-size: 0.95rem;
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.address strong {
+  color: var(--text-white);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.95rem;
+}
+
+.contact a {
+  color: #94a3b8;
+}
+
+.contact a:hover {
+  color: var(--primary);
+}
+
+/* Bottom copyright area */
+.bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+  .bottom {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.copyright {
+  color: #64748b;
+}
+
+.hospitalDisclaimer {
+  color: #64748b;
+  font-weight: 600;
+}
+
+.disclaimerPanel {
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 20px 0;
+  margin-top: 10px;
+}
+
+.disclaimerPanel p {
+  font-size: 0.8rem;
+  color: #64748b;
+  line-height: 1.6;
+  text-align: justify;
+}

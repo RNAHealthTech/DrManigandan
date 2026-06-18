@@ -1,0 +1,207 @@
+.journey {
+  background-color: transparent;
+  position: relative;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.columnTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+  padding-bottom: 12px;
+}
+
+/* Timeline Layout */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 5px;
+  width: 2px;
+  background-color: var(--border);
+}
+
+.timelineItem {
+  position: relative;
+}
+
+.timelineDot {
+  position: absolute;
+  top: 24px;
+  left: -20px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  border: 2px solid var(--bg-primary);
+  z-index: 2;
+  box-shadow: 0 0 0 4px var(--primary-light);
+}
+
+.timelineDotAlt {
+  background-color: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-light);
+}
+
+.timelineCard {
+  padding: 24px;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--primary);
+  background-color: var(--primary-light);
+  padding: 4px 10px;
+  border-radius: var(--radius-sm);
+  width: max-content;
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
+.timelineDotAlt + .timelineCard .period {
+  color: var(--accent);
+  background-color: var(--accent-light);
+}
+
+.role {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.inst {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}
+
+/* Awards layouts */
+.awardCard {
+  padding: 24px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.medalIcon {
+  font-size: 2.25rem;
+  background-color: var(--secondary-light);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+}
+
+.awardInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.awardYear {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--secondary-hover);
+  background-color: var(--secondary-light);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  width: max-content;
+  margin-bottom: 6px;
+}
+
+.awardName {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 4px;
+}
+
+.awardOrg {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* Memberships */
+.membershipSection {
+  margin-top: 16px;
+}
+
+.sectionSubtitle {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 16px;
+}
+
+.membershipList {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.membershipCard {
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.memberCheck {
+  font-size: 1.125rem;
+  color: var(--primary);
+  margin-top: 2px;
+}
+
+.memberInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.memberName {
+  font-size: 0.975rem;
+  font-weight: 600;
+  color: var(--text-main);
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+.memberYear {
+  font-size: 0.8rem;
+  color: var(--text-light);
+  font-weight: 600;
+}

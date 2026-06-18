@@ -1,0 +1,92 @@
+'use client';
+
+import React, { useState } from 'react';
+import { doctorData } from '@/data/doctorData';
+import styles from './About.module.css';
+
+export default function About() {
+  const [activeTab, setActiveTab] = useState<'education' | 'skills'>('education');
+
+  return (
+    <section id="about" className={styles.about}>
+      <div className="container">
+        <div className="section-title">
+          <h2>About & Qualifications</h2>
+          <p>The academic and clinical credentials of {doctorData.name}</p>
+        </div>
+
+        <div className={styles.grid}>
+          {/* Left Column: Bio Card */}
+          <div className={`${styles.bioCard} glass-card`}>
+            <div className={styles.cardHeader}>
+              <span className={styles.quoteIcon}>“</span>
+              <h3>Clinical Philosophy</h3>
+            </div>
+            <p className={styles.bioText}>{doctorData.bio}</p>
+            
+            <div className={styles.languages}>
+              <h4 className={styles.smallTitle}>Languages Spoken</h4>
+              <div className={styles.langList}>
+                {doctorData.languages.map((lang) => (
+                  <span key={lang} className={styles.langBadge}>
+                    🗣️ {lang}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Right Column: Tabbed Qualifications & Skills */}
+          <div className={styles.detailsCard}>
+            <div className={styles.tabs}>
+              <button 
+                className={`${styles.tabBtn} ${activeTab === 'education' ? styles.tabBtnActive : ''}`}
+                onClick={() => setActiveTab('education')}
+              >
+                Education & Credentials
+              </button>
+              <button 
+                className={`${styles.tabBtn} ${activeTab === 'skills' ? styles.tabBtnActive : ''}`}
+                onClick={() => setActiveTab('skills')}
+              >
+                Core Competencies
+              </button>
+            </div>
+
+            <div className={styles.tabContent}>
+              {activeTab === 'education' && (
+                <div className={styles.educationList}>
+                  {doctorData.education.map((edu, idx) => (
+                    <div key={idx} className={styles.educationItem}>
+                      <div className={styles.eduDot}></div>
+                      <div className={styles.eduInfo}>
+                        <span className={styles.eduYear}>{edu.year}</span>
+                        <h4 className={styles.eduDegree}>{edu.degree}</h4>
+                        <p className={styles.eduInst}>{edu.institution}</p>
+                      </div>
+                    </div>
+                  ))}
+                </div>
+              )}
+
+              {activeTab === 'skills' && (
+                <div className={styles.skillsGrid}>
+                  {doctorData.skills.map((skill, idx) => (
+                    <div key={idx} className={`${styles.skillCard} glass-card`}>
+                      <div className={styles.skillCheck}>
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                      </div>
+                      <span className={styles.skillName}>{skill}</span>
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
