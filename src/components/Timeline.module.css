@@ -66,6 +66,7 @@
   border: 2px solid var(--bg-primary);
   z-index: 2;
   box-shadow: 0 0 0 4px var(--primary-light);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .timelineDotAlt {
@@ -73,8 +74,20 @@
   box-shadow: 0 0 0 4px var(--accent-light);
 }
 
+.timelineItem:hover .timelineDot {
+  transform: scale(1.35);
+  background-color: var(--secondary);
+  box-shadow: 0 0 0 6px var(--secondary-glow);
+}
+
 .timelineCard {
   padding: 24px;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.timelineCard:hover {
+  transform: translateX(5px);
+  border-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.2);
 }
 
 .period {
@@ -113,6 +126,13 @@
   display: flex;
   gap: 20px;
   align-items: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.awardCard:hover {
+  transform: translateY(-4px);
+  border-color: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 0.25);
+  box-shadow: var(--shadow-gold-glow);
 }
 
 .medalIcon {
@@ -126,7 +146,14 @@
   justify-content: center;
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.awardCard:hover .medalIcon {
+  transform: scale(1.08) rotate(10deg);
+  background-color: var(--secondary);
+}
+
 
 .awardInfo {
   display: flex;
@@ -179,12 +206,25 @@
   display: flex;
   align-items: flex-start;
   gap: 16px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.membershipCard:hover {
+  transform: translateY(-3px);
+  border-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.18);
+  box-shadow: var(--shadow-md);
 }
 
 .memberCheck {
   font-size: 1.125rem;
   color: var(--primary);
   margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+.membershipCard:hover .memberCheck {
+  color: var(--secondary);
+  transform: scale(1.15);
 }
 
 .memberInfo {

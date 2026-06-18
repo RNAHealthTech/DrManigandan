@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { doctorData } from '@/data/doctorData';
 import styles from './AppointmentModal.module.css';
 
@@ -22,7 +22,22 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  if (!isOpen) return null;
+  const [shouldRender, setShouldRender] = useState(isOpen);
+  const [isAnimating, setIsAnimating] = useState(false);
+
+  useEffect(() => {
+    if (isOpen) {
+      setShouldRender(true);
+      const timer = setTimeout(() => setIsAnimating(true), 20);
+      return () => clearTimeout(timer);
+    } else {
+      setIsAnimating(false);
+      const timer = setTimeout(() => setShouldRender(false), 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isOpen]);
+
+  if (!shouldRender) return null;
 
   const currentFee = doctorData.fees.find(f => f.type.startsWith(consultationType.split(' ')[0]))?.amount || 1500;
 
@@ -58,8 +73,8 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
   ];
 
   return (
-    <div className={styles.overlay} onClick={resetForm}>
-      <div className={`${styles.modal} animate-fade-up`} onClick={e => e.stopPropagation()}>
+    <div className={`${styles.overlay} ${isAnimating ? styles.overlayActive : ''}`} onClick={resetForm}>
+      <div className={`${styles.modal} ${isAnimating ? styles.modalActive : ''}`} onClick={e => e.stopPropagation()}>
         <button className={styles.closeBtn} onClick={resetForm}>&times;</button>
         
         {!isSuccess ? (

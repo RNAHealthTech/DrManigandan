@@ -1,6 +1,7 @@
 'use client';
 
 import React from 'react';
+import ScrollReveal from '@/components/ScrollReveal';
 import styles from './Expertise.module.css';
 
 interface Specialty {
@@ -83,34 +84,39 @@ export default function Expertise() {
   return (
     <section id="expertise" className={styles.expertise}>
       <div className="container">
-        <div className="section-title">
-          <h2>Areas of Expertise</h2>
-          <p>Comprehensive plastic and reconstructive services tailored to patient needs</p>
-        </div>
+        <ScrollReveal direction="up">
+          <div className="section-title">
+            <h2>Areas of Expertise</h2>
+            <p>Comprehensive plastic and reconstructive services tailored to patient needs</p>
+          </div>
+        </ScrollReveal>
 
         <div className={styles.grid}>
           {specialties.map((spec, idx) => (
-            <div key={idx} className={`${styles.card} glass-card`}>
-              <div className={styles.iconWrapper}>
-                <span className={styles.icon}>{spec.icon}</span>
-              </div>
-              <h3 className={styles.title}>{spec.title}</h3>
-              <p className={styles.description}>{spec.description}</p>
-              
-              <div className={styles.treatmentWrapper}>
-                <h4 className={styles.treatmentTitle}>Common Procedures:</h4>
-                <div className={styles.tagWrapper}>
-                  {spec.treatments.map((tag, tagIdx) => (
-                    <span key={tagIdx} className={styles.tag}>
-                      {tag}
-                    </span>
-                  ))}
+            <ScrollReveal key={idx} direction="up" delay={idx * 120} duration={700}>
+              <div className={`${styles.card} glass-card`}>
+                <div className={styles.iconWrapper}>
+                  <span className={styles.icon}>{spec.icon}</span>
+                </div>
+                <h3 className={styles.title}>{spec.title}</h3>
+                <p className={styles.description}>{spec.description}</p>
+                
+                <div className={styles.treatmentWrapper}>
+                  <h4 className={styles.treatmentTitle}>Common Procedures:</h4>
+                  <div className={styles.tagWrapper}>
+                    {spec.treatments.map((tag, tagIdx) => (
+                      <span key={tagIdx} className={styles.tag}>
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-            </div>
+            </ScrollReveal>
           ))}
         </div>
       </div>
     </section>
   );
 }
+

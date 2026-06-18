@@ -28,15 +28,32 @@
   height: 50px;
   border-radius: var(--radius-sm);
   background-color: var(--primary-light);
+  color: var(--primary);
   display: flex;
   align-items: center;
   justify-content: center;
   margin-bottom: 24px;
   border: 1px solid rgba(13, 148, 136, 0.1);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .icon {
   font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.card:hover .iconWrapper {
+  background-color: var(--primary);
+  color: var(--text-white);
+  transform: scale(1.08) rotate(5deg);
+  box-shadow: var(--shadow-glow);
+}
+
+.card:hover .iconWrapper svg {
+  stroke: var(--text-white);
 }
 
 .title {
@@ -44,6 +61,11 @@
   margin-bottom: 12px;
   font-weight: 700;
   color: var(--text-main);
+  transition: color 0.3s ease;
+}
+
+.card:hover .title {
+  color: var(--primary);
 }
 
 .description {
@@ -83,4 +105,13 @@
   border-radius: var(--radius-sm);
   font-size: 0.8rem;
   font-weight: 600;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.card:hover .tag {
+  background-color: var(--primary-light);
+  border-color: hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.15);
+  color: var(--primary);
+  transform: translateY(-1px);
+}
+
