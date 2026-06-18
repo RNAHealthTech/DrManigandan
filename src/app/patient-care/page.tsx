@@ -1,6 +1,8 @@
 'use client';
 
 import React from 'react';
+import Link from 'next/link';
+import BookingCTA from '@/components/BookingCTA';
 import styles from './patient-care.module.css';
 
 export default function PatientCarePage() {
@@ -141,6 +143,29 @@ export default function PatientCarePage() {
             </ul>
           </div>
         </div>
+
+        {/* OPD Hours Quick View Card */}
+        <div className={`${styles.opdSection} no-print`}>
+          <div className={`${styles.opdCard} glass-card`}>
+            <div className={styles.opdInfo}>
+              <h3>Consultation Timings (OPD Hours)</h3>
+              <p>For check-ups, follow-ups, and suture removals, visit Dr. Manigandan K during his OPD hours at Sir Ganga Ram Hospital:</p>
+              <div className={styles.opdGrid}>
+                <span className={styles.opdBadge}>📍 Room No. F-53, First Floor</span>
+                <span className={styles.opdBadge}>🗓️ Mon - Sat (08:00 AM - 10:00 AM)</span>
+                <span className={styles.opdBadge}>📞 extension casualty / OPD</span>
+              </div>
+            </div>
+            <Link href="/opd" className="btn btn-secondary" style={{ whiteSpace: 'nowrap' }}>
+              Full OPD Details
+            </Link>
+          </div>
+        </div>
+      </div>
+      
+      {/* Reusable Booking CTA Banner */}
+      <div className="no-print" style={{ width: '100%' }}>
+        <BookingCTA />
       </div>
     </section>
   );

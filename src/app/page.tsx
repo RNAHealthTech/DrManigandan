@@ -1,8 +1,10 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import Link from 'next/link';
 import Hero from '@/components/Hero';
+import OpdSchedule from '@/components/OpdSchedule';
+import Achievements from '@/components/Achievements';
 import { useBooking } from '@/context/BookingContext';
 import { doctorData } from '@/data/doctorData';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -11,6 +13,11 @@ import styles from './home.module.css';
 
 export default function Home() {
   const { openBooking } = useBooking();
+  const [openFaq, setOpenFaq] = useState<number | null>(null);
+
+  const toggleFaq = (idx: number) => {
+    setOpenFaq(openFaq === idx ? null : idx);
+  };
 
   const primaryPillars = [
     {
@@ -49,6 +56,25 @@ export default function Home() {
     {
       title: "Patient-Centric Outcomes",
       description: "Designs customized surgical pathways tailored to each individual patient, emphasizing natural outcomes and minimal post-operative recovery times."
+    }
+  ];
+
+  const homeFaqs = [
+    {
+      question: "Sir Ganga Ram Hospital में OPD के लिए अपॉइंटमेंट कैसे बुक करें?",
+      answer: "आप सीधे हमारी वेबसाइट के 'Schedule Consultation' बटन पर क्लिक करके डायरेक्ट या वीडियो कंसल्टेशन बुक कर सकते हैं। इसके अलावा आप Sir Ganga Ram Hospital की मुख्य हेल्पलाइन या OPD रूम नंबर F-53 में भी संपर्क कर सकते हैं।"
+    },
+    {
+      question: "डॉ. मणिगंदन के पास किस प्रकार की सर्जरी उपलब्ध हैं?",
+      answer: "डॉ. मणिगंदन K एक स्पेशलिस्ट प्लास्टिक, कॉस्मेटिक और हैंड माइक्रोसर्जन हैं। वे ब्रेस्ट रीकंस्ट्रक्शन, राइनोप्लास्टी, क्लेफ्ट लिप (कटा होंठ), जले हुए निशान ठीक करने और हाथ की गंभीर चोटों की माइक्रोसर्जरी में माहिर हैं।"
+    },
+    {
+      question: "क्या कॉस्मेटिक और रीकंस्ट्रक्टिव सर्जरी का खर्च इंश्योरेंस में कवर होता है?",
+      answer: "रीकंस्ट्रक्टिव प्रोसीजर्स (जैसे कटे होंठ की सर्जरी, हाथ की माइक्रोसर्जरी) आमतौर पर मेडिकल रूप से आवश्यक होते हैं और इंश्योरेंस में कवर होते हैं। विशुद्ध रूप से कॉस्मेटिक सर्जरी (जैसे कॉस्मेटिक नाक की सर्जरी) सामान्यतः इंश्योरेंस के अंतर्गत नहीं आती हैं।"
+    },
+    {
+      question: "फर्स्ट कंसल्टेशन (पहली मुलाकात) के लिए मुझे क्या साथ लाना चाहिए?",
+      answer: "कृपया अपने पिछले सभी मेडिकल रिपोर्ट्स, एक्स-रे/सीटी स्कैन और वर्तमान दवाइयों की सूची अपने साथ लाएं ताकि डॉक्टर साहब आपके लिए एक सटीक सर्जिकल प्लान तैयार कर सकें।"
     }
   ];
 
@@ -169,6 +195,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section: Achievements & Memberships */}
+      <Achievements />
+
+      {/* Section: OPD Schedule & Tariffs */}
+      <OpdSchedule />
+
       {/* Section: Patient Testimonials */}
       <section className={`${styles.section} ${styles.testimonialsSection}`}>
         <div className="container">
@@ -197,6 +229,54 @@ export default function Home() {
                 </div>
               </ScrollReveal>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Section: FAQs Accordion */}
+      <section className={`${styles.section} ${styles.faqSection}`}>
+        <div className="container">
+          <ScrollReveal direction="up">
+            <div className="section-title">
+              <h2>Frequently Asked Questions</h2>
+              <p>Quick answers regarding appointments, surgeries, and clinical care</p>
+            </div>
+          </ScrollReveal>
+
+          <div className={styles.faqAccordion}>
+            {homeFaqs.map((faq, idx) => {
+              const isOpen = openFaq === idx;
+              return (
+                <ScrollReveal key={idx} direction="up" delay={idx * 100} className={styles.accordionRevealWrapper}>
+                  <div className={`${styles.accordionItem} ${isOpen ? styles.accordionItemOpen : ''} glass-card`}>
+                    <button 
+                      className={styles.accordionHeader} 
+                      onClick={() => toggleFaq(idx)}
+                      aria-expanded={isOpen}
+                    >
+                      <span className={styles.questionText}>{faq.question}</span>
+                      <span className={styles.accordionIcon}>
+                        {isOpen ? '−' : '+'}
+                      </span>
+                    </button>
+                    <div 
+                      className={`${styles.accordionContent} ${isOpen ? styles.accordionContentOpen : ''}`}
+                      style={{ maxHeight: isOpen ? '300px' : '0' }}
+                    >
+                      <p className={styles.answerText}>{faq.answer}</p>
+                    </div>
+                  </div>
+                </ScrollReveal>
+              );
+            })}
+          </div>
+
+          <div className={styles.viewAllContainer}>
+            <ScrollReveal direction="up" delay={400}>
+              <Link href="/faqs" className="btn btn-secondary">
+                View All Patient FAQs
+              </Link>
+            </ScrollReveal>
           </div>
         </div>
       </section>
