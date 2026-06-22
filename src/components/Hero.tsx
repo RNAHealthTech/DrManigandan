@@ -14,16 +14,20 @@ export default function Hero() {
 
   return (
     <section id="hero" className={styles.hero}>
-      {/* Abstract Design Elements */}
-      <div className={styles.circleBlob1}></div>
-      <div className={styles.circleBlob2}></div>
+      {/* Motion Graphics Background */}
+      <div className={styles.motionBg}>
+        <div className={`${styles.particle} ${styles.particle1}`}></div>
+        <div className={`${styles.particle} ${styles.particle2}`}></div>
+        <div className={`${styles.particle} ${styles.particle3}`}></div>
+        <div className={`${styles.particle} ${styles.particle4}`}></div>
+      </div>
 
       <div className={`${styles.container} container`}>
         <div className={styles.content}>
           <ScrollReveal direction="up" delay={100}>
             <div className={styles.badgeWrapper}>
-              <span className="badge badge-gold">
-                ✦ Gold Medalist 2022
+              <span className="badge badge-secondary">
+                ✦ MCh Plastic Surgery
               </span>
               <span className="badge">
                 Sir Ganga Ram Hospital
@@ -100,20 +104,14 @@ export default function Hero() {
               <div className={`${styles.floatingCard} ${styles.floatCard1} glass-card animate-float`}>
                 <div className={styles.floatIcon}>
                   <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 15C15.3137 15 18 12.3137 18 9C18 5.68629 15.3137 3 12 3C8.68629 3 6 5.68629 6 9C6 12.3137 8.68629 15 12 15Z" fill="url(#medalGoldGrad)" />
-                    <path d="M12 15.5L9.5 21L12 19.5L14.5 21L12 15.5Z" fill="var(--secondary)" />
-                    <circle cx="12" cy="9" r="4" stroke="white" strokeWidth="1" />
-                    <defs>
-                      <linearGradient id="medalGoldGrad" x1="6" y1="3" x2="18" y2="15" gradientUnits="userSpaceOnUse">
-                        <stop stopColor="#F59E0B" />
-                        <stop offset="1" stopColor="#D97706" />
-                      </linearGradient>
-                    </defs>
+                    <path d="M12 2L4 5V11C4 16.52 7.41 21.74 12 23C16.59 21.74 20 16.52 20 11V5L12 2Z" fill="var(--primary)" />
+                    <path d="M12 7V13" stroke="white" strokeWidth="2" strokeLinecap="round" />
+                    <path d="M9 10H15" stroke="white" strokeWidth="2" strokeLinecap="round" />
                   </svg>
                 </div>
                 <div className={styles.floatText}>
-                  <strong>BR Aggarwal Gold Medal</strong>
-                  <span>Best in Plastic Surgery</span>
+                  <strong>SGRH, New Delhi</strong>
+                  <span>Consultant</span>
                 </div>
               </div>
 

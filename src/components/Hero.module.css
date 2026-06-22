@@ -33,32 +33,35 @@
   }
 }
 
-.circleBlob1 {
+.motionBg {
   position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 600px;
-  height: 600px;
-  border-radius: 50%;
-  background: radial-gradient(circle, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.12) 0%, rgba(255, 255, 255, 0) 70%);
-  filter: blur(45px);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   z-index: 1;
   pointer-events: none;
-  animation: morph-blob-1 16s ease-in-out infinite;
 }
 
-.circleBlob2 {
+.particle {
   position: absolute;
-  bottom: -10%;
-  right: -5%;
-  width: 500px;
-  height: 500px;
   border-radius: 50%;
-  background: radial-gradient(circle, hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 0.1) 0%, rgba(255, 255, 255, 0) 70%);
-  filter: blur(45px);
-  z-index: 1;
-  pointer-events: none;
-  animation: morph-blob-2 20s ease-in-out infinite;
+  background: radial-gradient(circle, hsla(var(--primary-h), var(--primary-s), var(--primary-l), 0.15) 0%, rgba(255, 255, 255, 0) 70%);
+  filter: blur(40px);
+  animation: float-particle linear infinite;
+}
+
+.particle1 { width: 600px; height: 600px; top: -10%; left: -10%; animation-duration: 25s; }
+.particle2 { width: 500px; height: 500px; bottom: -10%; right: -5%; animation-duration: 30s; animation-direction: reverse; background: radial-gradient(circle, hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 0.12) 0%, rgba(255, 255, 255, 0) 70%); }
+.particle3 { width: 400px; height: 400px; top: 40%; left: 40%; animation-duration: 20s; }
+.particle4 { width: 300px; height: 300px; top: 20%; right: 20%; animation-duration: 22s; animation-direction: reverse; }
+
+@keyframes float-particle {
+  0% { transform: translateY(0) translateX(0) scale(1); }
+  33% { transform: translateY(-30px) translateX(50px) scale(1.1); }
+  66% { transform: translateY(40px) translateX(-20px) scale(0.9); }
+  100% { transform: translateY(0) translateX(0) scale(1); }
 }
 
 .badgeWrapper {

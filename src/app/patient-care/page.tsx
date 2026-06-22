@@ -151,7 +151,7 @@ export default function PatientCarePage() {
               <h3>Consultation Timings (OPD Hours)</h3>
               <p>For check-ups, follow-ups, and suture removals, visit Dr. Manigandan K during his OPD hours at Sir Ganga Ram Hospital:</p>
               <div className={styles.opdGrid}>
-                <span className={styles.opdBadge}>📍 Room No. F-53, First Floor</span>
+                <span className={styles.opdBadge}>📍 Room No. F-52, First Floor</span>
                 <span className={styles.opdBadge}>🗓️ Mon - Sat (08:00 AM - 10:00 AM)</span>
                 <span className={styles.opdBadge}>📞 extension casualty / OPD</span>
               </div>

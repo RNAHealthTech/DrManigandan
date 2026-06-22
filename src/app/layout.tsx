@@ -4,7 +4,7 @@ import ClientLayout from "@/components/ClientLayout";
 
 export const metadata: Metadata = {
   title: "Dr. Manigandan K | Plastic, Cosmetic & Hand Microsurgeon | Sir Ganga Ram Hospital",
-  description: "Official profile and appointment booking portal for Dr. Manigandan K, Associate Consultant in Plastic, Cosmetic & Hand Microsurgery at Sir Ganga Ram Hospital, New Delhi. Gold Medalist specializing in aesthetic procedures and microvascular reconstructions.",
+  description: "Official profile and appointment booking portal for Dr. Manigandan K, Consultant in Plastic, Cosmetic & Hand Microsurgery at Sir Ganga Ram Hospital, New Delhi. Specializing in aesthetic procedures and microvascular reconstructions.",
   keywords: "Dr. Manigandan K, Plastic Surgeon Delhi, Cosmetic Surgeon, Hand Microsurgery, Sir Ganga Ram Hospital, Reconstructive Surgery, Rhinoplasty Delhi, Cleft Lip Repair",
   authors: [{ name: "Dr. Manigandan K" }],
   openGraph: {

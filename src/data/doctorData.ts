@@ -72,11 +72,11 @@ export interface DoctorProfile {
 
 export const doctorData: DoctorProfile = {
   name: "Dr. Manigandan K",
-  designation: "Associate Consultant",
+  designation: "Consultant",
   specialty: "Plastic, Cosmetic & Hand Microsurgery",
   department: "Dept of Plastic, Cosmetic, Hand microsurgery",
   email: "manigandan.k89@gmail.com",
-  phone: "+91 11-42251097", // SGRH Direct extension
+  phone: "+91 9968968996",
   whatsapp: "+91 9999088497", // Realistic clinic coordinator coordinate
   mapsUrl: "https://maps.google.com/?q=Sir+Ganga+Ram+Hospital+New+Delhi",
   imageUrl: "/images/doctor.png",
@@ -125,7 +125,7 @@ export const doctorData: DoctorProfile = {
   positions: [
     {
       institution: "Sir Ganga Ram Hospital, New Delhi",
-      role: "Associate Consultant, Dept of Plastic, Cosmetic, Hand Microsurgery",
+      role: "Consultant, Dept of Plastic, Cosmetic, Hand Microsurgery",
       period: "2024 - 2025"
     },
     {
@@ -167,13 +167,19 @@ export const doctorData: DoctorProfile = {
       type: "Private OPD",
       days: "Monday - Saturday",
       time: "08:00 AM - 10:00 AM",
-      location: "Room No. F-53, Sir Ganga Ram Hospital, New Delhi"
+      location: "Room No. F-52, Sir Ganga Ram Hospital, New Delhi"
     },
     {
       type: "General OPD",
       days: "Monday - Saturday",
       time: "By Appointment",
       location: "Outpatient Department, Sir Ganga Ram Hospital, New Delhi"
+    },
+    {
+      type: "Noida Clinic",
+      days: "By Appointment",
+      time: "By Appointment",
+      location: "Noida, Uttar Pradesh 201301"
     }
   ],
   fees: [

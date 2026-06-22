@@ -62,7 +62,7 @@ export default function Home() {
   const homeFaqs = [
     {
       question: "Sir Ganga Ram Hospital में OPD के लिए अपॉइंटमेंट कैसे बुक करें?",
-      answer: "आप सीधे हमारी वेबसाइट के 'Schedule Consultation' बटन पर क्लिक करके डायरेक्ट या वीडियो कंसल्टेशन बुक कर सकते हैं। इसके अलावा आप Sir Ganga Ram Hospital की मुख्य हेल्पलाइन या OPD रूम नंबर F-53 में भी संपर्क कर सकते हैं।"
+      answer: "आप सीधे हमारी वेबसाइट के 'Schedule Consultation' बटन पर क्लिक करके डायरेक्ट या वीडियो कंसल्टेशन बुक कर सकते हैं। इसके अलावा आप Sir Ganga Ram Hospital की मुख्य हेल्पलाइन या OPD रूम नंबर F-52 में भी संपर्क कर सकते हैं।"
     },
     {
       question: "डॉ. मणिगंदन के पास किस प्रकार की सर्जरी उपलब्ध हैं?",
@@ -97,7 +97,7 @@ export default function Home() {
                 </svg>
                 <strong>Sir Ganga Ram Hospital, New Delhi</strong>
               </div>
-              <span className={styles.associationDept}>Associate Consultant &bull; Dept of Plastic, Cosmetic, Hand & Microsurgery</span>
+              <span className={styles.associationDept}>Consultant &bull; Dept of Plastic, Cosmetic, Hand & Microsurgery</span>
             </div>
           </div>
         </div>
@@ -150,12 +150,6 @@ export default function Home() {
                 <div className={`${styles.visualCard} glass-card`}>
                   <span className={styles.visualNumber}>KGMU</span>
                   <span className={styles.visualLabel}>MCh & fellowship</span>
-                </div>
-              </ScrollReveal>
-              <ScrollReveal direction="right" delay={300} className={styles.visualRevealCard}>
-                <div className={`${styles.visualCard} glass-card`}>
-                  <span className={styles.visualNumber}>Gold</span>
-                  <span className={styles.visualLabel}>Medal Winner</span>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={400} className={styles.visualRevealCard}>
