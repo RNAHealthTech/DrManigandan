@@ -36,6 +36,14 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (max-width: 768px) {
+  .goldMedalCard {
+    padding: 24px;
+    flex-direction: column;
+    gap: 16px;
+  }
+}
+
 .goldMedalCard:hover {
   transform: translateY(-6px);
   box-shadow: var(--shadow-lg), var(--shadow-gold-glow);
@@ -60,6 +68,13 @@
   border-radius: 50%;
   box-shadow: 0 4px 12px rgba(245, 158, 11, 0.15);
   flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+  .medalIcon {
+    font-size: 2.2rem;
+    padding: 12px;
+  }
 }
 
 .medalContent h3 {

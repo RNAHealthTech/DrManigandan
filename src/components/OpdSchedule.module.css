@@ -29,9 +29,16 @@
   border-bottom: 1px solid var(--border);
 }
 
+@media (max-width: 576px) {
+  .tabs {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
 .tabBtn {
   flex: 1;
-  padding: 18px;
+  padding: 18px 12px;
   font-family: var(--font-sans);
   font-size: 1rem;
   font-weight: 600;
@@ -41,6 +48,15 @@
   cursor: pointer;
   transition: all 0.2s ease-in-out;
   outline: none;
+  text-align: center;
+}
+
+@media (max-width: 576px) {
+  .tabBtn {
+    padding: 12px 6px;
+    font-size: 0.78rem;
+    line-height: 1.2;
+  }
 }
 
 .tabBtn:hover {
@@ -62,7 +78,7 @@
 
 @media (max-width: 576px) {
   .tabContent {
-    padding: 20px 16px;
+    padding: 20px 14px;
     min-height: auto;
   }
 }

@@ -129,6 +129,15 @@
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
+@media (max-width: 480px) {
+  .awardCard {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 18px;
+    gap: 14px;
+  }
+}
+
 .awardCard:hover {
   transform: translateY(-4px);
   border-color: hsla(var(--secondary-h), var(--secondary-s), var(--secondary-l), 0.25);
@@ -147,6 +156,14 @@
   box-shadow: var(--shadow-sm);
   flex-shrink: 0;
   transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@media (max-width: 480px) {
+  .medalIcon {
+    width: 48px;
+    height: 48px;
+    font-size: 1.75rem;
+  }
 }
 
 .awardCard:hover .medalIcon {

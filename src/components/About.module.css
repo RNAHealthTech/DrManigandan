@@ -117,6 +117,13 @@
   outline: none;
 }
 
+@media (max-width: 480px) {
+  .tabBtn {
+    padding: 14px 10px;
+    font-size: 0.85rem;
+  }
+}
+
 .tabBtn:hover {
   color: var(--primary);
   background-color: rgba(13, 148, 136, 0.02);

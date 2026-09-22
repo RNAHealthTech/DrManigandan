@@ -94,7 +94,7 @@ export const doctorData: DoctorProfile = {
   whatsapp: "+91 9999088497",
   bookingUrl: "https://appointment.sgrh.com",
   mapsUrl: "https://maps.google.com/?q=Sir+Ganga+Ram+Hospital+Marg+Rajinder+Nagar+New+Delhi+110060",
-  imageUrl: "/images/dr_siwas.jpg",
+  imageUrl: "/images/dr_gourav_official.jpg",
   languages: ["English", "Hindi", "Punjabi"],
   bio: "Dr. Gourav Siwas is an Associate Hony. Active Visiting Consultant in the Department of Plastic, Cosmetic & Hand Microsurgery at Sir Ganga Ram Hospital, New Delhi. Renowned for his surgical precision and expertise in complex hand trauma & replantations, aesthetic and cosmetic enhancements, microvascular tissue transfers, and post-oncological reconstruction, Dr. Siwas delivers state-of-the-art surgical care following international safety protocols with compassionate, patient-centered focus.",
   skills: [

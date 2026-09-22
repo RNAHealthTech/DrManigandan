@@ -81,6 +81,12 @@ body {
   min-height: 100vh;
 }
 
+@media (max-width: 768px) {
+  body {
+    padding-bottom: 60px;
+  }
+}
+
 /* Scrollbar customization */
 ::-webkit-scrollbar {
   width: 10px;
@@ -141,6 +147,12 @@ section {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 24px;
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 16px;
+  }
 }
 
 /* Animations */

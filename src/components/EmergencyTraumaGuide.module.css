@@ -200,6 +200,20 @@
   color: #991b1b;
 }
 
+@media (max-width: 480px) {
+  .phoneItem {
+    padding: 10px 12px;
+    gap: 10px;
+  }
+  .phoneText strong {
+    font-size: 0.75rem;
+  }
+  .phoneText span {
+    font-size: 0.88rem;
+    word-break: break-all;
+  }
+}
+
 .addressBox {
   padding: 12px;
   background: #f8fafc;

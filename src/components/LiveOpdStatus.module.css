@@ -79,3 +79,17 @@
   color: var(--text-muted);
   font-weight: 500;
 }
+
+@media (max-width: 480px) {
+  .statusBadge {
+    padding: 6px 12px;
+    gap: 8px;
+    max-width: 100%;
+  }
+  .statusMain {
+    font-size: 0.76rem;
+  }
+  .statusSub {
+    font-size: 0.68rem;
+  }
+}
