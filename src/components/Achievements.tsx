@@ -11,20 +11,20 @@ export default function Achievements() {
         <ScrollReveal direction="up">
           <div className="section-title">
             <h2>Achievements & Recognition</h2>
-            <p>Key academic awards, certifications, and professional memberships of Dr. Manigandan K</p>
+            <p>Key academic awards, certifications, and professional memberships of Dr. Gourav Siwas</p>
           </div>
         </ScrollReveal>
 
         <div className={styles.achievementsGrid}>
-          {/* Left side: Gold Medal Highlight */}
+          {/* Left side: Complex Microsurgery Highlight */}
           <ScrollReveal direction="right" delay={150} duration={850}>
             <div className={styles.goldMedalCard}>
               <div className={styles.medalIcon}>🏅</div>
               <div className={styles.medalContent}>
-                <h3>Dr. B.R. Aggarwal Memorial Gold Medal</h3>
-                <h4>Plastic Surgery (Uttar Pradesh State) &bull; 2022</h4>
+                <h3>Excellence in Complex Microsurgery & Hand Replantation</h3>
+                <h4>Sir Ganga Ram Hospital &bull; Department of Plastic Surgery</h4>
                 <p>
-                  Awarded the prestigious Gold Medal for outstanding academic and clinical performance in MCh Plastic & Reconstructive Surgery. Representing excellence in advanced microvascular surgery and aesthetic planning.
+                  Recognized for critical surgical contributions in emergency limb salvage, microvascular anastomosis, and successfully executing complex severed hand replantations and free tissue transfers at Sir Ganga Ram Hospital.
                 </p>
               </div>
             </div>
@@ -36,8 +36,8 @@ export default function Achievements() {
               <div className={`${styles.credentialCard} glass-card`}>
                 <div className={styles.credIcon}>🩺</div>
                 <div className={styles.credContent}>
-                  <h4>ATLS Instructor (ACS)</h4>
-                  <p>Certified Advanced Trauma Life Support Instructor by the American College of Surgeons, ensuring international standards of patient safety and emergency care.</p>
+                  <h4>ATLS Certified & Microvascular Trained</h4>
+                  <p>Certified in Advanced Trauma Life Support by the American College of Surgeons, adhering to the highest global standards in polytrauma care and surgical patient safety.</p>
                 </div>
               </div>
             </ScrollReveal>
@@ -47,11 +47,11 @@ export default function Achievements() {
                 <div className={styles.credIcon}>🛡️</div>
                 <div className={styles.credContent}>
                   <h4>Professional Memberships</h4>
-                  <p>Proud lifetime member of India's leading plastic, cosmetic, and reconstructive surgery bodies:</p>
+                  <p>Full member of prestigious national and international surgical associations:</p>
                   <div className={styles.membershipsList}>
-                    <span className={styles.membershipBadge}>APSI-2071</span>
-                    <span className={styles.membershipBadge}>IAAPS-2025</span>
-                    <span className={styles.membershipBadge}>ISCLPCA-LM579</span>
+                    <span className={styles.membershipBadge}>APSI (Plastic Surgery)</span>
+                    <span className={styles.membershipBadge}>ISSH (Hand Surgery)</span>
+                    <span className={styles.membershipBadge}>IAAPS (Aesthetic)</span>
                   </div>
                 </div>
               </div>

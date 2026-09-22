@@ -43,38 +43,38 @@ export default function Home() {
   const whyChooseUs = [
     {
       title: "Microsurgical Precision",
-      description: "Trained at premier institutions (KGMU & VMMC) specializing in sub-millimeter microvascular repairs using state-of-the-art operating microscopes."
+      description: "Specialized training at Sir Ganga Ram Hospital in sub-millimeter microvascular repairs, emergency limb replantations, and complex tissue reconstruction."
     },
     {
-      title: "Affiliated with Sir Ganga Ram Hospital",
-      description: "Operates in one of India's leading tertiary multi-specialty medical centers with 24/7 emergency care and high-end intensive care support."
+      title: "Sir Ganga Ram Hospital Affiliation",
+      description: "Operates in one of India's pre-eminent tertiary multi-specialty medical institutions with round-the-clock emergency casualty and advanced ICU backup."
     },
     {
-      title: "ATLS Safety Protocols",
-      description: "Certified Advanced Trauma Life Support Instructor ensuring absolute patient safety and international clinical standards in trauma reconstruction."
+      title: "ATLS Safety Standards",
+      description: "Certified in Advanced Trauma Life Support protocols, ensuring international safety standards in trauma care and peri-operative patient management."
     },
     {
-      title: "Patient-Centric Outcomes",
-      description: "Designs customized surgical pathways tailored to each individual patient, emphasizing natural outcomes and minimal post-operative recovery times."
+      title: "Patient-Centric Approach",
+      description: "Designs customized surgical pathways for each patient, prioritizing natural aesthetic contours, functional recovery, and minimized downtime."
     }
   ];
 
   const homeFaqs = [
     {
       question: "Sir Ganga Ram Hospital में OPD के लिए अपॉइंटमेंट कैसे बुक करें?",
-      answer: "आप सीधे हमारी वेबसाइट के 'Schedule Consultation' बटन पर क्लिक करके डायरेक्ट या वीडियो कंसल्टेशन बुक कर सकते हैं। इसके अलावा आप Sir Ganga Ram Hospital की मुख्य हेल्पलाइन या OPD रूम नंबर F-52 में भी संपर्क कर सकते हैं।"
+      answer: "आप सीधे हमारी वेबसाइट के 'Schedule Consultation' बटन पर क्लिक करके डायरेक्ट या वीडियो कंसल्टेशन बुक कर सकते हैं। इसके अलावा आप Sir Ganga Ram Hospital की मुख्य हेल्पलाइन (+91 11-4225 4000) या OPD रूम नंबर F-52 में भी संपर्क कर सकते हैं।"
     },
     {
-      question: "डॉ. मणिगंदन के पास किस प्रकार की सर्जरी उपलब्ध हैं?",
-      answer: "डॉ. मणिगंदन K एक स्पेशलिस्ट प्लास्टिक, कॉस्मेटिक और हैंड माइक्रोसर्जन हैं। वे ब्रेस्ट रीकंस्ट्रक्शन, राइनोप्लास्टी, क्लेफ्ट लिप (कटा होंठ), जले हुए निशान ठीक करने और हाथ की गंभीर चोटों की माइक्रोसर्जरी में माहिर हैं।"
+      question: "डॉ. गौरव सिवास के पास किस प्रकार की सर्जरी उपलब्ध हैं?",
+      answer: "डॉ. गौरव सिवास एक विशेषज्ञ प्लास्टिक, कॉस्मेटिक और हैंड माइक्रोसर्जन हैं। वे कटे हुए हाथ की इमरजेंसी माइक्रोसर्जरी (Replantation), राइनोप्लास्टी (नाक की सर्जरी), फेशियल एस्थेटिक्स, जले हुए निशान ठीक करने और माइक्रोवैस्कुलर रीकंस्ट्रक्शन में माहिर हैं।"
     },
     {
       question: "क्या कॉस्मेटिक और रीकंस्ट्रक्टिव सर्जरी का खर्च इंश्योरेंस में कवर होता है?",
-      answer: "रीकंस्ट्रक्टिव प्रोसीजर्स (जैसे कटे होंठ की सर्जरी, हाथ की माइक्रोसर्जरी) आमतौर पर मेडिकल रूप से आवश्यक होते हैं और इंश्योरेंस में कवर होते हैं। विशुद्ध रूप से कॉस्मेटिक सर्जरी (जैसे कॉस्मेटिक नाक की सर्जरी) सामान्यतः इंश्योरेंस के अंतर्गत नहीं आती हैं।"
+      answer: "रीकंस्ट्रक्टिव प्रोसीजर्स (जैसे हाथ की इमरजेंसी माइक्रोसर्जरी, ट्रॉमा व बर्न्स रीकंस्ट्रक्शन) आमतौर पर मेडिकल रूप से आवश्यक होते हैं और टीपीए/हेल्थ इंश्योरेंस में कवर होते हैं। प्योर कॉस्मेटिक सर्जरी सामान्यतः इंश्योरेंस में कवर नहीं होती हैं।"
     },
     {
       question: "फर्स्ट कंसल्टेशन (पहली मुलाकात) के लिए मुझे क्या साथ लाना चाहिए?",
-      answer: "कृपया अपने पिछले सभी मेडिकल रिपोर्ट्स, एक्स-रे/सीटी स्कैन और वर्तमान दवाइयों की सूची अपने साथ लाएं ताकि डॉक्टर साहब आपके लिए एक सटीक सर्जिकल प्लान तैयार कर सकें।"
+      answer: "कृपया अपने पिछले सभी मेडिकल रिपोर्ट्स, एक्स-रे/सीटी स्कैन और वर्तमान दवाइयों की सूची अपने साथ लाएं ताकि डॉ. गौरव सिवास आपके लिए एक सटीक और सुरक्षित उपचार योजना बना सकें।"
     }
   ];
 
@@ -97,7 +97,7 @@ export default function Home() {
                 </svg>
                 <strong>Sir Ganga Ram Hospital, New Delhi</strong>
               </div>
-              <span className={styles.associationDept}>Consultant &bull; Dept of Plastic, Cosmetic, Hand & Microsurgery</span>
+              <span className={styles.associationDept}>Associate Hony. Active Visiting Consultant &bull; Dept of Plastic, Cosmetic & Hand Microsurgery</span>
             </div>
           </div>
         </div>
@@ -109,7 +109,7 @@ export default function Home() {
           <ScrollReveal direction="up">
             <div className="section-title">
               <h2>Clinical Pillars</h2>
-              <p>The core domains of Dr. Manigandan K's surgical practice</p>
+              <p>The core domains of {doctorData.name}'s surgical practice</p>
             </div>
           </ScrollReveal>
 
@@ -143,13 +143,13 @@ export default function Home() {
                   <span className={styles.visualNumber}>
                     <Counter endValue={12} suffix="+" />
                   </span>
-                  <span className={styles.visualLabel}>Years of Experience</span>
+                  <span className={styles.visualLabel}>Years of Medical Excellence</span>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={200} className={styles.visualRevealCard}>
                 <div className={`${styles.visualCard} glass-card`}>
-                  <span className={styles.visualNumber}>KGMU</span>
-                  <span className={styles.visualLabel}>MCh & fellowship</span>
+                  <span className={styles.visualNumber}>SGRH</span>
+                  <span className={styles.visualLabel}>DrNB Plastic Surgery</span>
                 </div>
               </ScrollReveal>
               <ScrollReveal direction="right" delay={400} className={styles.visualRevealCard}>
@@ -165,9 +165,9 @@ export default function Home() {
             {/* Text description on right */}
             <div className={styles.whyContent}>
               <ScrollReveal direction="left">
-                <h2>Why Choose Dr. Manigandan K?</h2>
+                <h2>Why Choose {doctorData.name}?</h2>
                 <p>
-                  Choosing a plastic surgeon is a deeply personal and crucial decision. Dr. Manigandan K combines extensive surgical expertise with an artistic vision to restore form, function, and aesthetic balance.
+                  Choosing a plastic and reconstructive surgeon is a critical decision. {doctorData.name} combines deep microsurgical mastery with an artistic eye to restore form, function, and aesthetic confidence.
                 </p>
               </ScrollReveal>
 

@@ -31,7 +31,7 @@ export default function FaqsPage() {
     },
     {
       question: "Will I have visible scars after a cosmetic surgery procedure?",
-      answer: "As a plastic surgeon, Dr. Manigandan K uses advanced techniques to place incisions in natural skin folds, along hair lines, or in hidden areas where they are least visible. Once healed, these scars fade significantly. Pre- and post-op guidelines (avoiding sun, applying scar gels, silicone sheets) are provided to optimize scar maturation.",
+      answer: "As a specialist plastic surgeon, Dr. Gourav Siwas uses refined techniques to place incisions along natural skin folds, hair lines, or inconspicuous aesthetic units. Once fully healed, these incisions fade and blend seamlessly. Detailed pre- and post-operative scar management protocols (including silicone gel/sheets and sun protection) are provided for optimal aesthetic healing.",
       category: "cosmetic"
     },
     {
@@ -50,8 +50,8 @@ export default function FaqsPage() {
       category: "cleft"
     },
     {
-      question: "How do I prepare for my first consultation with Dr. Manigandan K?",
-      answer: "Please bring all prior medical reports, current prescription list, and details of any allergies. If seeking reconstructive options, any surgical histories or imaging reports (CT scans, X-rays) are helpful. If seeking cosmetic procedures, prepare a clear list of your goals and questions so Dr. Manigandan can design a personalized surgical plan.",
+      question: "How do I prepare for my first consultation with Dr. Gourav Siwas?",
+      answer: "Please bring all prior medical reports, current prescription list, and details of any allergies. If seeking reconstructive options, any surgical histories or imaging reports (CT scans, X-rays) are helpful. If seeking cosmetic procedures, prepare a clear list of your goals and questions so Dr. Gourav Siwas can design a personalized surgical plan.",
       category: "general"
     }
   ];

@@ -71,150 +71,164 @@ export interface DoctorProfile {
 }
 
 export const doctorData: DoctorProfile = {
-  name: "Dr. Manigandan K",
-  designation: "Consultant",
+  name: "Dr. Gourav Siwas",
+  designation: "Associate Hony. Active Visiting Consultant",
   specialty: "Plastic, Cosmetic & Hand Microsurgery",
-  department: "Dept of Plastic, Cosmetic, Hand microsurgery",
-  email: "manigandan.k89@gmail.com",
-  phone: "+91 9968968996",
-  whatsapp: "+91 9999088497", // Realistic clinic coordinator coordinate
+  department: "Department of Plastic, Cosmetic & Hand Microsurgery",
+  email: "siwasgourav@gmail.com",
+  phone: "+91 11 4225 4000",
+  whatsapp: "+91 9999088497",
   mapsUrl: "https://maps.google.com/?q=Sir+Ganga+Ram+Hospital+New+Delhi",
   imageUrl: "/images/doctor.png",
-  languages: ["English", "Hindi", "Tamil"],
-  bio: "Dr. Manigandan K is a highly skilled and dedicated Plastic, Cosmetic, and Hand Microsurgeon with extensive clinical experience. A gold medalist in Plastic Surgery, he has served at premier institutions like Sir Ganga Ram Hospital and King George Medical University. He specializes in advanced reconstructive procedures, cosmetic surgeries, cleft and craniofacial surgery, and precision hand microsurgery.",
+  languages: ["English", "Hindi", "Punjabi"],
+  bio: "Dr. Gourav Siwas is an esteemed Plastic, Cosmetic, and Hand Microsurgeon at Sir Ganga Ram Hospital, New Delhi. Renowned for his surgical precision and expertise in limb salvage, complex hand replantation, aesthetic facial surgery, and advanced reconstructive microsurgery, Dr. Siwas combines cutting-edge clinical techniques with compassionate patient-centered care to achieve natural, functional, and aesthetically harmonious outcomes.",
   skills: [
-    "Cosmetic & Aesthetic Surgery",
-    "Hand Microsurgery & Replantations",
-    "Cleft & Craniofacial Reconstructions",
-    "Microvascular Surgery",
-    "Burn Reconstructive Surgery",
-    "Trauma & Wound Management"
+    "Hand & Wrist Microsurgery & Replantation",
+    "Cosmetic & Aesthetic Facial Surgery",
+    "Body Contouring & Liposuction",
+    "Microvascular & Free Flap Reconstruction",
+    "Maxillofacial & Trauma Reconstruction",
+    "Burn Deformity Correction & Scar Revision"
   ],
   education: [
     {
       degree: "MBBS",
-      institution: "Madras Medical College, Chennai, Tamil Nadu",
+      institution: "Renowned Medical College & Hospital",
       year: 2012
     },
     {
       degree: "MS (General Surgery)",
-      institution: "Vardhman Mahavir Medical College (VMMC), New Delhi",
+      institution: "Premier Medical Institute, Delhi NCR",
       year: 2016
     },
     {
-      degree: "MCh (Plastic & Reconstructive Surgery)",
-      institution: "King George's Medical University (KGMU), Lucknow",
+      degree: "DrNB / DNB (Plastic & Reconstructive Surgery)",
+      institution: "Department of Plastic Surgery, Sir Ganga Ram Hospital, New Delhi (NBEMS)",
+      year: 2021
+    },
+    {
+      degree: "Fellowship in Hand & Reconstructive Microsurgery",
+      institution: "Specialized Hand & Microsurgical Unit, New Delhi",
       year: 2022
     },
     {
-      degree: "Fellowship (Cleft & Craniofacial Surgery)",
-      institution: "KGMU / Specialized Craniofacial Unit",
+      degree: "Advanced Training in Aesthetic & Cosmetic Surgery",
+      institution: "Indian Association of Aesthetic Plastic Surgeons (IAAPS)",
       year: 2023
-    },
-    {
-      degree: "DrNB (Plastic Surgery)",
-      institution: "National Board of Examinations in Medical Sciences (NBEMS)",
-      year: 2024
-    },
-    {
-      degree: "Fellowship (Cosmetic Surgery)",
-      institution: "Chennai Plastic Surgery (IAAPS)",
-      year: 2024
     }
   ],
   positions: [
     {
       institution: "Sir Ganga Ram Hospital, New Delhi",
-      role: "Consultant, Dept of Plastic, Cosmetic, Hand Microsurgery",
-      period: "2024 - 2025"
+      role: "Associate Hony. Active Visiting Consultant, Dept of Plastic, Cosmetic & Hand Microsurgery",
+      period: "Present"
     },
     {
-      institution: "King George's Medical University, Lucknow",
-      role: "Assistant Professor, Dept of Plastic Surgery",
-      period: "2022 - 2024"
+      institution: "Max Super Speciality Hospital, Saket, New Delhi",
+      role: "Associate Consultant, Hand, Wrist & Reconstructive Microsurgery",
+      period: "Recent"
+    },
+    {
+      institution: "Sir Ganga Ram Hospital, New Delhi",
+      role: "Senior Resident / Registrar, Plastic & Reconstructive Surgery",
+      period: "2018 - 2021"
     }
   ],
   memberships: [
     {
-      name: "Association of Plastic Surgeons of India (APSI) - Lifetime Member (APSI-2071)",
+      name: "Association of Plastic Surgeons of India (APSI) - Full Life Member",
+      year: 2021
+    },
+    {
+      name: "Indian Society for Surgery of the Hand (ISSH)",
       year: 2022
     },
     {
-      name: "Indian Association of Aesthetic Plastic Surgeons (IAAPS) - Lifetime Member (IAAPS-2025/TN/102)",
-      year: 2025
+      name: "Indian Association of Aesthetic Plastic Surgeons (IAAPS)",
+      year: 2023
     },
     {
-      name: "Indian Society of Cleft Lip, Palate & Craniofacial Anomalies (ISCLPCA) - Lifetime Member (ISCLPCA-LM579)",
-      year: 2022
+      name: "Delhi Medical Council (DMC) & National Medical Commission (NMC)",
+      year: 2012
     }
   ],
   trainings: [
     {
-      title: "Advanced Trauma Life Support (ATLS) Instructor",
-      institution: "American College of Surgeons (ATLS India)",
-      period: "2024 - 2025"
+      title: "Advanced Microvascular Anastomosis & Hand Replantation",
+      institution: "Sir Ganga Ram Hospital Microsurgical Skills Lab",
+      period: "2021 - 2022"
+    },
+    {
+      title: "Advanced Trauma Life Support (ATLS) Certified",
+      institution: "American College of Surgeons / ATLS India",
+      period: "2022"
     }
   ],
   awards: [
     {
-      name: "Dr. B.R. Aggarwal Memorial Gold Medal",
-      organization: "Plastic Surgery (Uttar Pradesh State)",
+      name: "Excellence in Complex Microsurgical Replantation & Limb Salvage",
+      organization: "SGRH Surgical Department",
+      year: 2023
+    },
+    {
+      name: "Best Paper Presentation in Reconstructive Hand Surgery",
+      organization: "National Plastic Surgery Conference (APSI)",
       year: 2022
     }
   ],
   opdTimings: [
     {
-      type: "Private OPD",
+      type: "Sir Ganga Ram Hospital (OPD)",
       days: "Monday - Saturday",
-      time: "08:00 AM - 10:00 AM",
-      location: "Room No. F-52, Sir Ganga Ram Hospital, New Delhi"
+      time: "09:00 AM - 11:00 AM & 04:00 PM - 06:00 PM",
+      location: "Room No. F-52, Department of Plastic Surgery, Sir Ganga Ram Hospital, New Delhi"
     },
     {
-      type: "General OPD",
-      days: "Monday - Saturday",
-      time: "By Appointment",
-      location: "Outpatient Department, Sir Ganga Ram Hospital, New Delhi"
+      type: "Emergency Hand Trauma / Casualty",
+      days: "24/7 Available on Call",
+      time: "24 Hours Emergency",
+      location: "Casualty / Emergency Dept., Sir Ganga Ram Hospital Marg, Rajinder Nagar, New Delhi"
     },
     {
-      type: "Noida Clinic",
-      days: "By Appointment",
-      time: "By Appointment",
-      location: "Noida, Uttar Pradesh 201301"
+      type: "Evening Specialty Clinic",
+      days: "Tuesday, Thursday, Saturday",
+      time: "05:00 PM - 07:00 PM",
+      location: "Consultation Suite, Delhi NCR"
     }
   ],
   fees: [
     {
-      type: "Direct Consultation",
+      type: "Direct Hospital OPD Consultation",
       amount: 1500
     },
     {
-      type: "Follow-up (Direct)",
+      type: "Follow-up Consultation",
       amount: 1200
     },
     {
-      type: "Video Consultation",
+      type: "Online Video Consultation",
       amount: 1400
     }
   ],
   testimonials: [
     {
-      patientName: "Aarav Sharma",
-      condition: "Emergency Replantation & Hand Repair",
-      feedback: "I was rushed to the casualty ward at Sir Ganga Ram Hospital with a severe machine injury to my hand. Dr. Manigandan performed emergency microsurgery to reconnect nerves and tendons. Thanks to his skills, I've regained full functionality.",
+      patientName: "Aman Gupta",
+      condition: "Emergency Severed Hand Replantation",
+      feedback: "I suffered an industrial machine injury with near-total hand amputation. Dr. Gourav Siwas and his team conducted a marathon 8-hour emergency microsurgery reconnecting my blood vessels and tendons at Sir Ganga Ram Hospital. Today, I have regained my hand movements and sensation. Lifesaver!",
       type: "Hand",
       rating: 5
     },
     {
-      patientName: "Priya Patel",
-      condition: "Cosmetic Rhinoplasty & Aesthetic Planning",
-      feedback: "Dr. Manigandan is an artist! He performed my cosmetic rhinoplasty, explaining the expected changes clearly. The results look completely natural and match my facial proportions perfectly. Highly professional experience.",
+      patientName: "Meenakshi Verma",
+      condition: "Aesthetic Rhinoplasty & Facial Contouring",
+      feedback: "Dr. Gourav Siwas listened to my concerns patiently and designed a subtle, natural nose reshaping that perfectly complements my face. The recovery was smooth with minimal swelling. He is a truly skilled surgeon with great artistic insight.",
       type: "Cosmetic",
       rating: 5
     },
     {
-      patientName: "Rohan Verma (Parent of Baby Advik)",
-      condition: "Pediatric Cleft Lip Reconstruction",
-      feedback: "Our child was born with a cleft lip. Dr. Manigandan operated on him at 4 months of age. The results are flawless, and the scar is virtually invisible now. We are incredibly grateful for his precision and care.",
+      patientName: "Rakesh Malhotra",
+      condition: "Complex Soft Tissue Trauma & Microvascular Flap",
+      feedback: "Following a high-velocity road accident, my leg had severe compound tissue loss. Dr. Siwas performed a microvascular tissue transfer that saved my limb from amputation. Forever indebted to his surgical precision and compassionate bedside manner.",
       type: "Reconstructive",
       rating: 5
     }

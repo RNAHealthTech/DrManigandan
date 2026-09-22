@@ -33,7 +33,7 @@ export default function Header() {
               <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--primary)" />
               <circle cx="12" cy="12" r="3" fill="var(--secondary)" />
             </svg>
-            <span className={styles.logoText}>Dr. Manigandan K</span>
+            <span className={styles.logoText}>Dr. Gourav Siwas</span>
           </Link>
         </div>
 

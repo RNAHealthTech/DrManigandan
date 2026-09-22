@@ -22,7 +22,7 @@ export default function JourneyPage() {
             <ScrollReveal direction="up">
               <div className="section-title">
                 <h2>Current Clinical Posting</h2>
-                <p>Present active roles and facilities where Dr. Manigandan K conducts clinical consultations and surgical procedures</p>
+                <p>Present active roles and facilities where {doctorData.name} conducts clinical consultations and surgical procedures</p>
               </div>
             </ScrollReveal>
 
@@ -33,11 +33,11 @@ export default function JourneyPage() {
                   <h3>{currentPos.institution}</h3>
                   <h4>{currentPos.role} ({currentPos.period})</h4>
                   <p>
-                    Dr. Manigandan is currently serving as a Consultant at the Department of Plastic, Cosmetic, Hand & Microsurgery at Sir Ganga Ram Hospital, New Delhi. SGRH is one of India's pre-eminent multi-specialty healthcare facilities offering 24/7 emergency microsurgical hand trauma repairs and aesthetic treatments.
+                    {doctorData.name} is currently serving as an {doctorData.designation} at the Department of Plastic, Cosmetic, Hand & Microsurgery at Sir Ganga Ram Hospital, New Delhi. SGRH is one of India's pre-eminent multi-specialty healthcare institutions offering 24/7 emergency microsurgical hand trauma repairs, reconstructive procedures, and aesthetic surgeries.
                   </p>
                   <div className={styles.details}>
-                    <span className={styles.detailItem}>📍 Room No. F-52, First Floor</span>
-                    <span className={styles.detailItem}>🗓️ Monday - Saturday (08:00 AM - 10:00 AM)</span>
+                    <span className={styles.detailItem}>📍 Room No. F-52, Plastic Surgery OPD</span>
+                    <span className={styles.detailItem}>🗓️ Monday - Saturday (09:00 AM - 11:00 AM & 04:00 PM - 06:00 PM)</span>
                     <span className={styles.detailItem}>✉️ {doctorData.email}</span>
                   </div>
                 </div>

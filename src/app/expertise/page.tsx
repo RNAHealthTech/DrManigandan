@@ -19,7 +19,7 @@ export default function ExpertisePage() {
           <ScrollReveal direction="up">
             <div className="section-title">
               <h2>Clinical Outcomes & Patient Stories</h2>
-              <p>Real experiences from patients who underwent specialized treatments with Dr. Manigandan K</p>
+              <p>Real experiences from patients who underwent specialized treatments with {doctorData.name}</p>
             </div>
           </ScrollReveal>
 

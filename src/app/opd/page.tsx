@@ -4,6 +4,7 @@ import React from 'react';
 import OpdSchedule from '@/components/OpdSchedule';
 import BookingCTA from '@/components/BookingCTA';
 import ScrollReveal from '@/components/ScrollReveal';
+import { doctorData } from '@/data/doctorData';
 import styles from './opdPage.module.css';
 
 export default function OpdPage() {
@@ -18,7 +19,7 @@ export default function OpdPage() {
           <ScrollReveal direction="up">
             <div className="section-title">
               <h2>Pre-Consultation Instructions</h2>
-              <p>Essential checklists to prepare for your physical or online appointment with Dr. Manigandan K</p>
+              <p>Essential checklists to prepare for your physical or online appointment with {doctorData.name}</p>
             </div>
           </ScrollReveal>
 

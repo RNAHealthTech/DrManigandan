@@ -27,7 +27,7 @@ export default function Hero() {
           <ScrollReveal direction="up" delay={100}>
             <div className={styles.badgeWrapper}>
               <span className="badge badge-secondary">
-                ✦ MCh Plastic Surgery
+                ✦ DrNB / DNB Plastic Surgery
               </span>
               <span className="badge">
                 Sir Ganga Ram Hospital
@@ -44,7 +44,7 @@ export default function Hero() {
 
           <ScrollReveal direction="up" delay={300}>
             <p className={styles.description}>
-              Welcome to the official portal of <strong>{doctorData.name}</strong>, a distinguished <strong>{doctorData.specialty}</strong>. Combining microvascular precision and artistic vision to deliver world-class reconstructive and cosmetic outcomes.
+              Welcome to the official portal of <strong>{doctorData.name}</strong>, a distinguished <strong>{doctorData.specialty}</strong>. Combining microvascular precision and artistic vision to deliver world-class reconstructive, cosmetic, and hand replantation outcomes.
             </p>
           </ScrollReveal>
 
@@ -72,8 +72,8 @@ export default function Hero() {
                 <span className={styles.statLabel}>Years in Medicine</span>
               </div>
               <div className={styles.statItem}>
-                <span className={styles.statNumber}>KGMU & VMMC</span>
-                <span className={styles.statLabel}>Premier Education</span>
+                <span className={styles.statNumber}>SGRH & NBEMS</span>
+                <span className={styles.statLabel}>Plastic & Microsurgery</span>
               </div>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>
@@ -111,7 +111,7 @@ export default function Hero() {
                 </div>
                 <div className={styles.floatText}>
                   <strong>SGRH, New Delhi</strong>
-                  <span>Consultant</span>
+                  <span>Plastic & Hand Surgery</span>
                 </div>
               </div>
 
@@ -124,8 +124,8 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div className={styles.floatText}>
-                  <strong>ATLS Instructor</strong>
-                  <span>Trauma Life Support</span>
+                  <strong>ATLS Certified</strong>
+                  <span>Trauma Care Protocols</span>
                 </div>
               </div>
             </div>
