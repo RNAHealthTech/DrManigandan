@@ -1,0 +1,81 @@
+.statusBadge {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(0, 124, 122, 0.25);
+  border-radius: var(--radius-full);
+  box-shadow: 0 4px 15px rgba(0, 124, 122, 0.08);
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.statusBadge:hover {
+  border-color: var(--primary);
+  box-shadow: 0 6px 20px rgba(0, 124, 122, 0.15);
+  transform: translateY(-1px);
+}
+
+.indicatorWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 12px;
+  height: 12px;
+}
+
+.statusDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.dotActive {
+  background: #10b981;
+  box-shadow: 0 0 8px #10b981;
+}
+
+.dotInactive {
+  background: #f59e0b;
+  box-shadow: 0 0 6px #f59e0b;
+}
+
+.pulseRing {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+  z-index: 1;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(0.9); opacity: 0.8; }
+  50% { transform: scale(2.2); opacity: 0; }
+  100% { transform: scale(0.9); opacity: 0; }
+}
+
+.statusContent {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.statusMain {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--text-main);
+  line-height: 1.2;
+}
+
+.statusSub {
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-weight: 500;
+}

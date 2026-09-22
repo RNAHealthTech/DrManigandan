@@ -7,6 +7,7 @@ import { doctorData } from '@/data/doctorData';
 import { useBooking } from '@/context/BookingContext';
 import ScrollReveal from '@/components/ScrollReveal';
 import Counter from '@/components/Counter';
+import LiveOpdStatus from '@/components/LiveOpdStatus';
 import styles from './Hero.module.css';
 
 export default function Hero() {
@@ -24,13 +25,17 @@ export default function Hero() {
 
       <div className={`${styles.container} container`}>
         <div className={styles.content}>
+          <ScrollReveal direction="up" delay={50}>
+            <LiveOpdStatus />
+          </ScrollReveal>
+
           <ScrollReveal direction="up" delay={100}>
             <div className={styles.badgeWrapper}>
               <span className="badge badge-secondary">
-                ✦ DrNB / DNB Plastic Surgery
+                ✦ {doctorData.designation}
               </span>
               <span className="badge">
-                Sir Ganga Ram Hospital
+                🏥 Sir Ganga Ram Hospital
               </span>
             </div>
           </ScrollReveal>
@@ -44,7 +49,7 @@ export default function Hero() {
 
           <ScrollReveal direction="up" delay={300}>
             <p className={styles.description}>
-              Welcome to the official portal of <strong>{doctorData.name}</strong>, a distinguished <strong>{doctorData.specialty}</strong>. Combining microvascular precision and artistic vision to deliver world-class reconstructive, cosmetic, and hand replantation outcomes.
+              Welcome to the official clinical portal of <strong>{doctorData.name}</strong>, {doctorData.designation} in the <strong>{doctorData.department}</strong> at <strong>{doctorData.hospital}</strong>. Combining sub-millimeter microvascular precision and aesthetic mastery to deliver world-class reconstructive, cosmetic, and hand replantation outcomes.
             </p>
           </ScrollReveal>
 
@@ -52,13 +57,13 @@ export default function Hero() {
             <div className={styles.actions}>
               <button 
                 id="hero-book-btn" 
-                onClick={() => openBooking()} 
+                onClick={() => openBooking('Direct (Hospital OPD)')} 
                 className="btn btn-primary btn-shine-wrapper"
               >
-                Book Consultation
+                Schedule Consultation
               </button>
               <Link href="/about" className="btn btn-secondary">
-                View Qualifications
+                View Credentials & Bio
               </Link>
             </div>
           </ScrollReveal>
@@ -73,7 +78,7 @@ export default function Hero() {
               </div>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>SGRH & NBEMS</span>
-                <span className={styles.statLabel}>Plastic & Microsurgery</span>
+                <span className={styles.statLabel}>DrNB Plastic Surgery</span>
               </div>
               <div className={styles.statItem}>
                 <span className={styles.statNumber}>
@@ -110,7 +115,7 @@ export default function Hero() {
                   </svg>
                 </div>
                 <div className={styles.floatText}>
-                  <strong>SGRH, New Delhi</strong>
+                  <strong>Sir Ganga Ram Hospital</strong>
                   <span>Plastic & Hand Surgery</span>
                 </div>
               </div>

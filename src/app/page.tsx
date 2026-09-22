@@ -5,6 +5,8 @@ import Link from 'next/link';
 import Hero from '@/components/Hero';
 import OpdSchedule from '@/components/OpdSchedule';
 import Achievements from '@/components/Achievements';
+import ProcedureEstimator from '@/components/ProcedureEstimator';
+import EmergencyTraumaGuide from '@/components/EmergencyTraumaGuide';
 import { useBooking } from '@/context/BookingContext';
 import { doctorData } from '@/data/doctorData';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -132,6 +134,9 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Section: Interactive Treatment & Recovery Estimator */}
+      <ProcedureEstimator />
+
       {/* Section 2: Why Choose Us */}
       <section className={`${styles.section} ${styles.whyChoose}`}>
         <div className="container">
@@ -188,6 +193,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Section: Hand Trauma & Replantation Emergency Guide */}
+      <EmergencyTraumaGuide />
 
       {/* Section: Achievements & Memberships */}
       <Achievements />

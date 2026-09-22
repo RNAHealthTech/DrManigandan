@@ -10,7 +10,7 @@ interface AppointmentModalProps {
   selectedType?: string;
 }
 
-export default function AppointmentModal({ isOpen, onClose, selectedType = 'Direct Consultation' }: AppointmentModalProps) {
+export default function AppointmentModal({ isOpen, onClose, selectedType = 'Direct (Hospital OPD)' }: AppointmentModalProps) {
   const [consultationType, setConsultationType] = useState(selectedType);
   const [date, setDate] = useState('');
   const [timeSlot, setTimeSlot] = useState('');
@@ -39,7 +39,7 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
 
   if (!shouldRender) return null;
 
-  const currentFee = doctorData.fees.find(f => f.type.startsWith(consultationType.split(' ')[0]))?.amount || 1500;
+  const currentFee = doctorData.fees.find(f => f.type === consultationType)?.amount || 1500;
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -49,7 +49,7 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1500);
+    }, 1200);
   };
 
   const resetForm = () => {
@@ -64,12 +64,14 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
   };
 
   const timeSlots = [
-    "08:00 AM - 08:20 AM",
-    "08:20 AM - 08:40 AM",
-    "08:40 AM - 09:00 AM",
-    "09:00 AM - 09:20 AM",
-    "09:20 AM - 09:40 AM",
-    "09:40 AM - 10:00 AM"
+    "09:00 AM - 09:30 AM",
+    "09:30 AM - 10:00 AM",
+    "10:00 AM - 10:30 AM",
+    "10:30 AM - 11:00 AM",
+    "04:00 PM - 04:30 PM",
+    "04:30 PM - 05:00 PM",
+    "05:00 PM - 05:30 PM",
+    "05:30 PM - 06:00 PM"
   ];
 
   return (
@@ -96,7 +98,7 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
                   {doctorData.fees.map((fee) => (
                     <div 
                       key={fee.type}
-                      className={`${styles.feeCard} ${consultationType === fee.type || (consultationType.includes('Direct') && fee.type.includes('Direct') && !fee.type.includes('Follow-up')) ? styles.feeCardActive : ''}`}
+                      className={`${styles.feeCard} ${consultationType === fee.type ? styles.feeCardActive : ''}`}
                       onClick={() => setConsultationType(fee.type)}
                     >
                       <span className={styles.feeTypeName}>{fee.type}</span>
@@ -173,10 +175,10 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
               </div>
 
               <div className="form-group">
-                <label className="form-label">Medical History / Notes (Optional)</label>
+                <label className="form-label">Medical History / Clinical Notes (Optional)</label>
                 <textarea 
                   className="form-input" 
-                  placeholder="Briefly describe the reason for appointment"
+                  placeholder="Briefly describe the reason for appointment (e.g. Hand injury, Rhinoplasty, Scar revision)"
                   value={message}
                   onChange={e => setMessage(e.target.value)}
                 />
@@ -191,7 +193,7 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
               >
                 {isSubmitting ? (
                   <div className={styles.spinner}></div>
-                ) : `Confirm Appointment (Pay ₹${currentFee} at Clinic)`}
+                ) : `Submit Appointment Request (Pay ₹${currentFee} at Hospital Desk)`}
               </button>
             </form>
           </>
@@ -204,11 +206,11 @@ export default function AppointmentModal({ isOpen, onClose, selectedType = 'Dire
             </div>
             <h3>Appointment Request Submitted!</h3>
             <p className={styles.successText}>
-              Thank you, <strong>{name}</strong>. Your appointment request with <strong>{doctorData.name}</strong> on <strong>{date}</strong> at <strong>{timeSlot}</strong> has been successfully received.
+              Thank you, <strong>{name}</strong>. Your appointment request with <strong>{doctorData.name}</strong> on <strong>{date}</strong> at <strong>{timeSlot}</strong> has been received.
             </p>
             <div className={styles.receipt}>
               <div><strong>Type:</strong> {consultationType}</div>
-              <div><strong>Fee:</strong> ₹{currentFee} (Payable at desk)</div>
+              <div><strong>Tariff:</strong> ₹{currentFee} (Payable at hospital counter)</div>
               <div><strong>Location:</strong> {doctorData.opdTimings[0].location}</div>
             </div>
             <button className="btn btn-primary" onClick={resetForm} style={{ marginTop: '20px' }}>

@@ -4,6 +4,7 @@ import React from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppointmentModal from '@/components/AppointmentModal';
+import FloatingActionBar from '@/components/FloatingActionBar';
 import { BookingProvider, useBooking } from '@/context/BookingContext';
 
 interface ClientLayoutProps {
@@ -16,10 +17,11 @@ function ClientLayoutContent({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Header />
-      <main style={{ minHeight: '80vh', paddingTop: '80px' }}>
+      <main style={{ minHeight: '80vh', paddingTop: '84px' }}>
         {children}
       </main>
       <Footer />
+      <FloatingActionBar />
       <AppointmentModal 
         isOpen={isBookingOpen} 
         onClose={closeBooking} 

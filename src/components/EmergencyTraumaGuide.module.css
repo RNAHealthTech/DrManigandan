@@ -1,0 +1,216 @@
+.traumaSection {
+  padding: 80px 0;
+  background: linear-gradient(180deg, #fff5f5 0%, #faf9f6 100%);
+  position: relative;
+}
+
+.headerBox {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.emergencyTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 16px;
+  background: #fee2e2;
+  color: #b91c1c;
+  border-radius: var(--radius-full);
+  font-size: 0.82rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+  border: 1px solid #fca5a5;
+}
+
+.blinkingIcon {
+  animation: blink 1.2s infinite;
+}
+
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.3; }
+  100% { opacity: 1; }
+}
+
+.headerBox h2 {
+  font-size: 2.4rem;
+  color: #991b1b;
+  margin-bottom: 12px;
+}
+
+.headerBox p {
+  font-size: 1.05rem;
+  color: var(--text-muted);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .contentGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stepsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stepCard {
+  padding: 24px;
+  cursor: pointer;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.stepCard:hover {
+  border-color: #ef4444;
+  transform: translateX(4px);
+}
+
+.stepCardActive {
+  border-color: #ef4444;
+  border-left: 6px solid #ef4444;
+  background: #ffffff;
+  box-shadow: 0 10px 25px rgba(239, 68, 68, 0.12);
+}
+
+.stepHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.stepBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #b91c1c;
+  background: #fee2e2;
+  padding: 3px 10px;
+  border-radius: var(--radius-full);
+}
+
+.stepIcon {
+  font-size: 1.5rem;
+}
+
+.stepTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 6px;
+}
+
+.stepText {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+}
+
+/* Hotline Card */
+.hotlineCard {
+  padding: 36px;
+  background: #ffffff;
+  border: 2px solid rgba(239, 68, 68, 0.3);
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 20px 40px rgba(239, 68, 68, 0.08);
+}
+
+@media (max-width: 576px) {
+  .hotlineCard {
+    padding: 24px;
+  }
+}
+
+.hotlineTop h3 {
+  font-size: 1.35rem;
+  font-weight: 700;
+  color: var(--text-main);
+  margin-bottom: 8px;
+}
+
+.hotlineBadge {
+  display: inline-block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #dc2626;
+  letter-spacing: 0.05em;
+  margin-bottom: 6px;
+}
+
+.phoneList {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.phoneItem {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 12px 16px;
+  background: #fef2f2;
+  border-radius: var(--radius-sm);
+  border: 1px solid #fee2e2;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.phoneItem:hover {
+  background: #fee2e2;
+  border-color: #fca5a5;
+  transform: translateY(-2px);
+}
+
+.phoneIcon {
+  font-size: 1.3rem;
+}
+
+.phoneText {
+  display: flex;
+  flex-direction: column;
+}
+
+.phoneText strong {
+  font-size: 0.82rem;
+  color: #7f1d1d;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.phoneText span {
+  font-size: 1rem;
+  font-weight: 700;
+  color: #991b1b;
+}
+
+.addressBox {
+  padding: 12px;
+  background: #f8fafc;
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 0.82rem;
+  color: var(--text-muted);
+}
+
+.addressBox strong {
+  color: var(--text-main);
+}

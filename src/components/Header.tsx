@@ -3,6 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { useBooking } from '@/context/BookingContext';
+import { doctorData } from '@/data/doctorData';
 import styles from './Header.module.css';
 
 export default function Header() {
@@ -28,12 +29,17 @@ export default function Header() {
       <div className={`${styles.container} container`}>
         <div className={styles.logo}>
           <Link href="/" className={styles.logoLink}>
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '6px' }}>
-              <rect x="10" y="2" width="4" height="20" rx="1.5" fill="var(--primary)" />
-              <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--primary)" />
-              <circle cx="12" cy="12" r="3" fill="var(--secondary)" />
-            </svg>
-            <span className={styles.logoText}>Dr. Gourav Siwas</span>
+            <div className={styles.logoIconWrapper}>
+              <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <rect x="10" y="2" width="4" height="20" rx="1.5" fill="var(--primary)" />
+                <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--primary)" />
+                <circle cx="12" cy="12" r="3" fill="var(--secondary)" />
+              </svg>
+            </div>
+            <div className={styles.logoTextGroup}>
+              <span className={styles.logoText}>Dr. Gourav Siwas</span>
+              <span className={styles.logoSubtext}>Sir Ganga Ram Hospital</span>
+            </div>
           </Link>
         </div>
 
@@ -47,8 +53,12 @@ export default function Header() {
           <Link href="/patient-care" className={styles.navLink}>Patient Care</Link>
         </nav>
 
-        <div className={styles.cta}>
-          <button id="header-book-btn" onClick={() => openBooking()} className="btn btn-primary btn-sm">
+        <div className={styles.ctaGroup}>
+          <a href={`tel:${doctorData.phone}`} className={styles.emergencyLink} title="SGRH 24/7 Helpline">
+            <span className={styles.pulseDot}></span>
+            <span className={styles.emergencyText}>+91 11-4225 4000</span>
+          </a>
+          <button id="header-book-btn" onClick={() => openBooking()} className="btn btn-primary btn-sm btn-shine-wrapper">
             Book Appointment
           </button>
         </div>
@@ -74,6 +84,12 @@ export default function Header() {
           <Link href="/opd" onClick={() => setIsMenuOpen(false)} className={styles.mobileNavLink}>OPD Timings</Link>
           <Link href="/faqs" onClick={() => setIsMenuOpen(false)} className={styles.mobileNavLink}>FAQs</Link>
           <Link href="/patient-care" onClick={() => setIsMenuOpen(false)} className={styles.mobileNavLink}>Patient Care</Link>
+          
+          <div className={styles.mobileHelpline}>
+            <span>Hospital 24/7 Helpline:</span>
+            <a href={`tel:${doctorData.phone}`}>+91 11-4225 4000</a>
+          </div>
+
           <button 
             id="header-book-btn-mobile"
             onClick={() => {
@@ -81,7 +97,7 @@ export default function Header() {
               openBooking();
             }} 
             className="btn btn-primary"
-            style={{ marginTop: '20px', width: '100%' }}
+            style={{ marginTop: '16px', width: '100%' }}
           >
             Book Appointment
           </button>

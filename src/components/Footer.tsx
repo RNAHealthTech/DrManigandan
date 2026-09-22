@@ -15,29 +15,43 @@ export default function Footer() {
           {/* Column 1: Bio & Branding */}
           <div className={styles.column}>
             <div className={styles.brand}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ marginRight: '6px' }}>
-                <rect x="10" y="2" width="4" height="20" rx="1.5" fill="var(--primary)" />
-                <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--primary)" />
-                <circle cx="12" cy="12" r="3" fill="var(--secondary)" />
-              </svg>
-              <h3 className={styles.logoText}>{doctorData.name}</h3>
+              <div className={styles.brandIcon}>
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="10" y="2" width="4" height="20" rx="1.5" fill="var(--primary)" />
+                  <rect x="2" y="10" width="20" height="4" rx="1.5" fill="var(--primary)" />
+                  <circle cx="12" cy="12" r="3" fill="var(--secondary)" />
+                </svg>
+              </div>
+              <div>
+                <h3 className={styles.logoText}>{doctorData.name}</h3>
+                <span className={styles.logoSubtext}>{doctorData.designation}</span>
+              </div>
             </div>
             <p className={styles.description}>
-              {doctorData.designation} in Plastic, Cosmetic & Hand Microsurgery. Combining surgical precision with aesthetic vision at Sir Ganga Ram Hospital, New Delhi.
+              {doctorData.department} at {doctorData.hospital}. Specialized in complex hand trauma & replantation, aesthetic facial surgery, microvascular reconstruction, and burns rehabilitation.
             </p>
+            <div className={styles.accreditation}>
+              <span className={styles.accBadge}>🏥 NABH Accredited Hospital</span>
+              <span className={styles.accBadge}>🛡️ ATLS Certified</span>
+            </div>
           </div>
 
           {/* Column 2: Quick Links */}
           <div className={styles.column}>
-            <h4 className={styles.title}>Quick Navigation</h4>
+            <h4 className={styles.title}>Clinical Navigation</h4>
             <ul className={styles.links}>
-              <li><Link href="/">Home</Link></li>
+              <li><Link href="/">Home Page</Link></li>
               <li><Link href="/about">About & Qualifications</Link></li>
-              <li><Link href="/expertise">Areas of Expertise</Link></li>
-              <li><Link href="/journey">Journey & Achievements</Link></li>
-              <li><Link href="/opd">OPD Timings</Link></li>
-              <li><Link href="/faqs">FAQs</Link></li>
-              <li><Link href="/patient-care">Patient Care</Link></li>
+              <li><Link href="/expertise">Specialties & Procedures</Link></li>
+              <li><Link href="/journey">Academic Journey</Link></li>
+              <li><Link href="/opd">OPD Schedule & Tariffs</Link></li>
+              <li><Link href="/faqs">Patient FAQs</Link></li>
+              <li><Link href="/patient-care">Pre & Post Care Guides</Link></li>
+              <li>
+                <a href={doctorData.bookingUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'var(--primary)', fontWeight: 600 }}>
+                  SGRH Official Booking ↗
+                </a>
+              </li>
             </ul>
           </div>
 
@@ -45,30 +59,27 @@ export default function Footer() {
           <div className={styles.column}>
             <h4 className={styles.title}>Sir Ganga Ram Hospital</h4>
             <address className={styles.address}>
-              <strong>Plastic Surgery Dept (Room F-52)</strong><br />
+              <strong>Department of Plastic Surgery (Room F-52)</strong><br />
               Sir Ganga Ram Hospital Marg,<br />
               Rajinder Nagar, New Delhi,<br />
-              Delhi - 110060
+              Delhi - 110060, India
             </address>
             <div className={styles.contact} style={{ marginTop: '16px' }}>
               <p>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-                <a href={`mailto:${doctorData.email}`} style={{ verticalAlign: 'middle' }}>{doctorData.email}</a>
+                <span className={styles.contactIcon}>✉️</span>
+                <a href={`mailto:${doctorData.email}`}>{doctorData.email}</a>
               </p>
               <p>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <span style={{ verticalAlign: 'middle' }}>+91 11-42254000 / +91 11-35125600</span>
+                <span className={styles.contactIcon}>📞</span>
+                <span>Hospital: +91 11-4225 4000 / +91 11-351-256-00</span>
               </p>
               <p>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ marginRight: '6px', verticalAlign: 'middle' }}>
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-                <span style={{ verticalAlign: 'middle' }}>24/7 Casualty: +91 11-42251097</span>
+                <span className={styles.contactIcon}>🚨</span>
+                <span>24/7 Casualty: +91 11-4225 1097 / 1098 / 1099</span>
+              </p>
+              <p>
+                <span className={styles.contactIcon}>🚑</span>
+                <span>Ambulance: +91 11-4225 3030</span>
               </p>
             </div>
           </div>
@@ -77,16 +88,16 @@ export default function Footer() {
         {/* Medical Disclaimer Panel */}
         <div className={styles.disclaimerPanel}>
           <p>
-            <strong>Medical Disclaimer:</strong> The information provided on this website is for educational and clinical informational purposes only. It is not intended to be a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified plastic surgeon or medical practitioner directly regarding any specific cosmetic or reconstructive healthcare concerns.
+            <strong>Medical Disclaimer:</strong> The clinical information on this portal is intended for informational and educational guidance. It should not be used as a substitute for in-person consultation with a qualified plastic, cosmetic, and reconstructive surgeon. Please visit the OPD at Sir Ganga Ram Hospital or call the casualty desk for medical emergencies.
           </p>
         </div>
 
         <div className={styles.bottom}>
           <p className={styles.copyright}>
-            &copy; {currentYear} {doctorData.name}. All rights reserved. Registered medical practitioner.
+            &copy; {currentYear} {doctorData.name}. All rights reserved.
           </p>
           <div className={styles.hospitalDisclaimer}>
-            <span>Affiliated with Sir Ganga Ram Hospital, New Delhi</span>
+            <span>Sir Ganga Ram Hospital, Rajinder Nagar, New Delhi</span>
           </div>
         </div>
       </div>

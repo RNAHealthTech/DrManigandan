@@ -52,9 +52,16 @@ export interface DoctorProfile {
   designation: string;
   specialty: string;
   department: string;
+  hospital: string;
+  hospitalAddress: string;
   email: string;
   phone: string;
+  phoneAlt: string;
+  emergencyPhone: string;
+  casualtyPhone: string;
+  ambulancePhone: string;
   whatsapp: string;
+  bookingUrl: string;
   mapsUrl: string;
   imageUrl: string;
   languages: string[];
@@ -67,6 +74,7 @@ export interface DoctorProfile {
   fees: Fee[];
   bio: string;
   skills: string[];
+  interests: string[];
   testimonials: Testimonial[];
 }
 
@@ -75,20 +83,37 @@ export const doctorData: DoctorProfile = {
   designation: "Associate Hony. Active Visiting Consultant",
   specialty: "Plastic, Cosmetic & Hand Microsurgery",
   department: "Department of Plastic, Cosmetic & Hand Microsurgery",
+  hospital: "Sir Ganga Ram Hospital, New Delhi",
+  hospitalAddress: "Sir Ganga Ram Hospital Marg, Rajinder Nagar, New Delhi, Delhi - 110060",
   email: "siwasgourav@gmail.com",
-  phone: "+91 11 4225 4000",
+  phone: "+91 11-4225 4000",
+  phoneAlt: "+91 11-351-256-00",
+  emergencyPhone: "+91 11-4225 4000",
+  casualtyPhone: "+91 11-4225 1097 / 1098 / 1099",
+  ambulancePhone: "+91 11-4225 3030",
   whatsapp: "+91 9999088497",
-  mapsUrl: "https://maps.google.com/?q=Sir+Ganga+Ram+Hospital+New+Delhi",
-  imageUrl: "/images/doctor.png",
+  bookingUrl: "https://appointment.sgrh.com",
+  mapsUrl: "https://maps.google.com/?q=Sir+Ganga+Ram+Hospital+Marg+Rajinder+Nagar+New+Delhi+110060",
+  imageUrl: "/images/dr_siwas.jpg",
   languages: ["English", "Hindi", "Punjabi"],
-  bio: "Dr. Gourav Siwas is an esteemed Plastic, Cosmetic, and Hand Microsurgeon at Sir Ganga Ram Hospital, New Delhi. Renowned for his surgical precision and expertise in limb salvage, complex hand replantation, aesthetic facial surgery, and advanced reconstructive microsurgery, Dr. Siwas combines cutting-edge clinical techniques with compassionate patient-centered care to achieve natural, functional, and aesthetically harmonious outcomes.",
+  bio: "Dr. Gourav Siwas is an Associate Hony. Active Visiting Consultant in the Department of Plastic, Cosmetic & Hand Microsurgery at Sir Ganga Ram Hospital, New Delhi. Renowned for his surgical precision and expertise in complex hand trauma & replantations, aesthetic and cosmetic enhancements, microvascular tissue transfers, and post-oncological reconstruction, Dr. Siwas delivers state-of-the-art surgical care following international safety protocols with compassionate, patient-centered focus.",
   skills: [
+    "Emergency Hand & Finger Replantation",
+    "Microvascular Free Flap Reconstruction",
+    "Aesthetic Facial & Rhinoplasty Surgery",
+    "Body Contouring & Advanced Liposuction",
+    "Breast Aesthetic & Oncoplastic Reconstruction",
+    "Burn Deformity Correction & Scar Revision",
+    "Maxillofacial & Polytrauma Reconstruction",
+    "Peripheral Nerve & Tendon Surgery"
+  ],
+  interests: [
     "Hand & Wrist Microsurgery & Replantation",
     "Cosmetic & Aesthetic Facial Surgery",
-    "Body Contouring & Liposuction",
-    "Microvascular & Free Flap Reconstruction",
-    "Maxillofacial & Trauma Reconstruction",
-    "Burn Deformity Correction & Scar Revision"
+    "Breast Aesthetic & Oncoplastic Surgery",
+    "Microvascular Free Tissue Transfers",
+    "Post-Burn Contracture & Scar Management",
+    "Maxillofacial Trauma & Soft Tissue Reconstruction"
   ],
   education: [
     {
@@ -120,7 +145,7 @@ export const doctorData: DoctorProfile = {
   positions: [
     {
       institution: "Sir Ganga Ram Hospital, New Delhi",
-      role: "Associate Hony. Active Visiting Consultant, Dept of Plastic, Cosmetic & Hand Microsurgery",
+      role: "Associate Hony. Active Visiting Consultant, Dept. of Plastic, Cosmetic & Hand Microsurgery",
       period: "Present"
     },
     {
@@ -178,35 +203,35 @@ export const doctorData: DoctorProfile = {
   ],
   opdTimings: [
     {
-      type: "Sir Ganga Ram Hospital (OPD)",
+      type: "General OPD",
       days: "Monday - Saturday",
-      time: "09:00 AM - 11:00 AM & 04:00 PM - 06:00 PM",
+      time: "09:00 AM - 11:00 AM",
       location: "Room No. F-52, Department of Plastic Surgery, Sir Ganga Ram Hospital, New Delhi"
     },
     {
-      type: "Emergency Hand Trauma / Casualty",
-      days: "24/7 Available on Call",
-      time: "24 Hours Emergency",
-      location: "Casualty / Emergency Dept., Sir Ganga Ram Hospital Marg, Rajinder Nagar, New Delhi"
+      type: "Private OPD",
+      days: "Monday - Saturday",
+      time: "04:00 PM - 06:00 PM",
+      location: "Private OPD Suite / Room F-52, Sir Ganga Ram Hospital, New Delhi"
     },
     {
-      type: "Evening Specialty Clinic",
-      days: "Tuesday, Thursday, Saturday",
-      time: "05:00 PM - 07:00 PM",
-      location: "Consultation Suite, Delhi NCR"
+      type: "Other Clinic / Emergency",
+      days: "24/7 On-Call Emergency",
+      time: "Round the Clock (24 Hours)",
+      location: "Casualty / Emergency Dept., Sir Ganga Ram Hospital Marg, Rajinder Nagar, New Delhi"
     }
   ],
   fees: [
     {
-      type: "Direct Hospital OPD Consultation",
+      type: "Direct (Hospital OPD)",
       amount: 1500
     },
     {
-      type: "Follow-up Consultation",
+      type: "Follow-up (Direct)",
       amount: 1200
     },
     {
-      type: "Online Video Consultation",
+      type: "Video Consultation",
       amount: 1400
     }
   ],
