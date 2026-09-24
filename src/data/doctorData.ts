@@ -195,7 +195,7 @@ export const doctorData: DoctorProfile = {
   ],
   awards: [
     {
-      name: "Youngest Indian Plastic Surgeon Certified by European Board (EBOPRAS)",
+      name: "India’s Youngest Plastic Surgeon to Receive European Board Certification (EBOPRAS)",
       organization: "European Board of Plastic Reconstructive & Aesthetic Surgery",
       year: 2023
     },

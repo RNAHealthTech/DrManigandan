@@ -32,7 +32,7 @@ export default function Hero() {
           <ScrollReveal direction="up" delay={100}>
             <div className={styles.badgeWrapper}>
               <span className="badge badge-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}>
-                <span>🇪🇺</span> Youngest European Board Certified Indian Plastic Surgeon
+                <span>🇪🇺</span> India’s Youngest Plastic Surgeon to Receive European Board Certification
               </span>
               <span className="badge">
                 🏥 Sir Ganga Ram Hospital

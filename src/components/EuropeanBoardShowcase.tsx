@@ -41,11 +41,11 @@ export default function EuropeanBoardShowcase() {
                 </div>
 
                 <h2 className={styles.headline}>
-                  Youngest Indian Plastic Surgeon Certified by <span className={styles.goldText}>European Board</span>
+                  India’s Youngest Plastic Surgeon to Receive <span className={styles.goldText}>European Board Certification</span>
                 </h2>
 
                 <p className={styles.leadText}>
-                  Dr. Gourav Siwas has achieved the prestigious landmark of becoming the <strong>Youngest Indian Plastic Surgeon certified by the European Board of Plastic, Reconstructive and Aesthetic Surgery (EBOPRAS)</strong>. This rare international fellowship validates top-tier surgical mastery, international ethical standards, and advanced operative safety.
+                  Dr. Gourav Siwas has achieved the prestigious landmark of becoming <strong>India’s Youngest Plastic Surgeon to receive European Board Certification (EBOPRAS)</strong>. This rare international fellowship validates top-tier surgical mastery, international ethical standards, and advanced operative safety.
                 </p>
 
                 <div className={styles.featuresList}>
