@@ -31,8 +31,8 @@ export default function Hero() {
 
           <ScrollReveal direction="up" delay={100}>
             <div className={styles.badgeWrapper}>
-              <span className="badge badge-secondary">
-                ✦ {doctorData.designation}
+              <span className="badge badge-gold" style={{ display: 'inline-flex', alignItems: 'center', gap: '6px', fontWeight: 700 }}>
+                <span>🇪🇺</span> Youngest European Board Certified Indian Plastic Surgeon
               </span>
               <span className="badge">
                 🏥 Sir Ganga Ram Hospital
@@ -121,16 +121,12 @@ export default function Hero() {
               </div>
 
               <div className={`${styles.floatingCard} ${styles.floatCard2} glass-card animate-float-delayed`}>
-                <div className={styles.floatIcon}>
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M12 2L4 5V11C4 16.52 7.41 21.74 12 23C16.59 21.74 20 16.52 20 11V5L12 2Z" fill="var(--primary)" />
-                    <path d="M12 7V17" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-                    <path d="M7 12H17" stroke="white" strokeWidth="2.5" strokeLinecap="round" />
-                  </svg>
+                <div className={styles.floatIcon} style={{ background: 'linear-gradient(135deg, #0f172a, #032b30)', color: '#fbbf24', fontSize: '1.1rem' }}>
+                  ★
                 </div>
                 <div className={styles.floatText}>
-                  <strong>ATLS Certified</strong>
-                  <span>Trauma Care Protocols</span>
+                  <strong>EBOPRAS Certified</strong>
+                  <span>Youngest Indian Fellow</span>
                 </div>
               </div>
             </div>

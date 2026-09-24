@@ -7,6 +7,7 @@ import OpdSchedule from '@/components/OpdSchedule';
 import Achievements from '@/components/Achievements';
 import ProcedureEstimator from '@/components/ProcedureEstimator';
 import EmergencyTraumaGuide from '@/components/EmergencyTraumaGuide';
+import EuropeanBoardShowcase from '@/components/EuropeanBoardShowcase';
 import { useBooking } from '@/context/BookingContext';
 import { doctorData } from '@/data/doctorData';
 import ScrollReveal from '@/components/ScrollReveal';
@@ -104,6 +105,9 @@ export default function Home() {
           </div>
         </div>
       </ScrollReveal>
+
+      {/* European Board Landmark Distinction Showcase */}
+      <EuropeanBoardShowcase />
 
       {/* Section 1: Clinical Pillars */}
       <section className={styles.section}>

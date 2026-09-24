@@ -161,6 +161,10 @@ export const doctorData: DoctorProfile = {
   ],
   memberships: [
     {
+      name: "European Board of Plastic Reconstructive & Aesthetic Surgery (EBOPRAS) - Certified",
+      year: 2023
+    },
+    {
       name: "Association of Plastic Surgeons of India (APSI) - Full Life Member",
       year: 2021
     },
@@ -190,6 +194,11 @@ export const doctorData: DoctorProfile = {
     }
   ],
   awards: [
+    {
+      name: "Youngest Indian Plastic Surgeon Certified by European Board (EBOPRAS)",
+      organization: "European Board of Plastic Reconstructive & Aesthetic Surgery",
+      year: 2023
+    },
     {
       name: "Excellence in Complex Microsurgical Replantation & Limb Salvage",
       organization: "SGRH Surgical Department",

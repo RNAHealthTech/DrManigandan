@@ -1,6 +1,14 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import "./globals.css";
 import ClientLayout from "@/components/ClientLayout";
+
+const poppins = Poppins({
+  weight: ["300", "400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-poppins",
+});
 
 export const metadata: Metadata = {
   title: "Dr. Gourav Siwas | Plastic, Cosmetic & Hand Microsurgeon | Sir Ganga Ram Hospital",
@@ -22,8 +30,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" data-scroll-behavior="smooth">
-      <body>
+    <html lang="en" className={poppins.variable} data-scroll-behavior="smooth">
+      <body className={poppins.className}>
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

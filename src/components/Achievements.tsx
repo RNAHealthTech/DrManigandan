@@ -49,6 +49,7 @@ export default function Achievements() {
                   <h4>Professional Memberships</h4>
                   <p>Full member of prestigious national and international surgical associations:</p>
                   <div className={styles.membershipsList}>
+                    <span className={styles.membershipBadge} style={{ background: '#fef3c7', color: '#92400e', borderColor: '#fde68a' }}>🇪🇺 EBOPRAS (European Board)</span>
                     <span className={styles.membershipBadge}>APSI (Plastic Surgery)</span>
                     <span className={styles.membershipBadge}>ISSH (Hand Surgery)</span>
                     <span className={styles.membershipBadge}>IAAPS (Aesthetic)</span>
